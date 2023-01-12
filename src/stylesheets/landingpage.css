@@ -1,0 +1,64 @@
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.top-tabs {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.manager-tag {
+  padding: 5px;
+  width: 50%;
+  background-color: #61616141;
+  border: solid 2px black;
+  border-bottom: solid 2px black;
+  border-radius: 10px 10px 0 0;
+  transition: 0.15s;
+}
+
+.staff-tab {
+  padding: 5px;
+  width: 50%;
+  background-color: #61616141;
+  border: solid 2px black;
+  border-bottom: solid 2px black;
+  /* border-left: solid 2px transparent; */
+  border-radius: 10px 10px 0 0;
+  transition: 0.15s
+}
+
+.active {
+  padding: 5px;
+  width: 50%;
+  border: solid 2px black;
+  border-radius: 10px 10px 0 0;
+  border-bottom: solid 2px transparent;
+}
+
+.input-container {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+  flex-direction: column;
+  border-bottom: solid 2px black;
+  border-left: solid 2px black;
+  border-right: solid 2px black;
+  font-size: 22px;
+}
+
+.input-box {
+  margin: 1rem;
+  width: 230px;
+  height: 22px;
+  font-size: 20px;
+}
