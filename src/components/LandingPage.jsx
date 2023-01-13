@@ -14,11 +14,11 @@ const LandingPage = () => {
       </div>
       <div className="input-container">
         {admin ?
-          <label>
+          <label className="input-label">
             Enter Manager ID <br />
             <input type="text" className="input-box" spellCheck={false} />
           </label> :
-          <label>
+          <label className="input-label">
             Enter Staff ID <br />
             <input type="text" className="input-box" spellCheck={false} />
           </label>

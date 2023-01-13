@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  
 }
 
 .top-tabs {
@@ -15,31 +16,46 @@
 
 .manager-tag {
   padding: 5px;
+  padding-top: 10px;
   width: 50%;
-  background-color: #61616141;
-  border: solid 2px black;
-  border-bottom: solid 2px black;
   border-radius: 10px 10px 0 0;
   transition: 0.15s;
+  border-bottom: solid 2px transparent;
+  color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff;
+  
 }
 
 .staff-tab {
   padding: 5px;
+  padding-top: 10px;
   width: 50%;
-  background-color: #61616141;
-  border: solid 2px black;
-  border-bottom: solid 2px black;
-  /* border-left: solid 2px transparent; */
   border-radius: 10px 10px 0 0;
-  transition: 0.15s
+  transition: 0.15s;
+  border-bottom: solid 2px transparent;
+  color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
 }
 
 .active {
   padding: 5px;
+  padding-top: 10px;
   width: 50%;
-  border: solid 2px black;
-  border-radius: 10px 10px 0 0;
   border-bottom: solid 2px transparent;
+  background-color: #61616141;
+  border-radius: 10px 10px 0 0;
+  transition: 0.15s;
+  color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
 }
 
 .input-container {
@@ -50,10 +66,32 @@
   width: 300px;
   height: 200px;
   flex-direction: column;
-  border-bottom: solid 2px black;
-  border-left: solid 2px black;
-  border-right: solid 2px black;
+  border-bottom: solid 4px #fff;
+  border-left: solid 4px #fff;
+  border-right: solid 4px #fff;
+  border-radius: 0 0 15px 15px;
   font-size: 22px;
+  box-shadow: 0 0 .2rem #fff,
+      0 0 .2rem #fff,
+      0 0 2rem #bc13fe,
+      0 0 0.8rem #bc13fe,
+      0 0 2.8rem #bc13fe,
+      inset 0 0 1.3rem #bc13fe;
+
+  font-family: sans-serif;
+}
+
+.input-label {
+  color: #fff;
+    text-shadow:
+      0 0 0 #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #bc13fe,
+      0 0 82px #bc13fe,
+      0 0 92px #bc13fe,
+      0 0 102px #bc13fe,
+      0 0 151px #bc13fe;
 }
 
 .input-box {
@@ -61,4 +99,11 @@
   width: 230px;
   height: 22px;
   font-size: 20px;
+  box-shadow: 0 0 .2rem #fff,
+      0 0 .2rem #fff,
+      0 0 15px #13a0fe,
+      0 0 0.8rem #13a0fe,
+      0 0 5px #13a0fe,
+      inset 0 0 10px #13a0fe;
+  border: solid 0.5px #fff;
 }
