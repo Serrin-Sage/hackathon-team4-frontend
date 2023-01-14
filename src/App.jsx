@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import LandingPage from './components/LandingPage'
+import TablePage from './components/TablePage'
 function App() {
   return (
     <div className="App">
@@ -12,3 +13,4 @@ function App() {
 }
 
 export default App
+
