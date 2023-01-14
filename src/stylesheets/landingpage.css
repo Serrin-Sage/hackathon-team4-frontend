@@ -3,7 +3,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
 }
 
 .top-tabs {
@@ -12,6 +11,7 @@
   justify-content: space-evenly;
   cursor: pointer;
   font-size: 22px;
+  font-family: Avenir;
 }
 
 .manager-tag {
@@ -40,7 +40,7 @@
     text-shadow:
       0 0 7px #fff,
       0 0 10px #fff,
-      0 0 21px #fff,
+      0 0 21px #fff;
 }
 
 .active {
@@ -77,8 +77,7 @@
       0 0 0.8rem #bc13fe,
       0 0 2.8rem #bc13fe,
       inset 0 0 1.3rem #bc13fe;
-
-  font-family: sans-serif;
+  font-family: Avenir;
 }
 
 .input-label {

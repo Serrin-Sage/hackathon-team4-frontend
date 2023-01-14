@@ -30,3 +30,13 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
+@font-face {
+  font-family: Avenir;
+  src: url("./Avenir Regular.ttf");
+}
+
+body {
+  margin: 0;
+  font-family: Avenir;
+}
