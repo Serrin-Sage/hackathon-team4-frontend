@@ -66,11 +66,13 @@
   width: 300px;
   height: 200px;
   flex-direction: column;
-  border-bottom: solid 4px #fff;
+  border: solid 4px #fff;
+  /* border-bottom: solid 4px #fff;
   border-left: solid 4px #fff;
-  border-right: solid 4px #fff;
+  border-right: solid 4px #fff; */
   border-radius: 0 0 15px 15px;
   font-size: 22px;
+  letter-spacing: 2px;
   box-shadow: 0 0 .2rem #fff,
       0 0 .2rem #fff,
       0 0 2rem #bc13fe,
@@ -96,8 +98,8 @@
 .input-box {
   margin: 1rem;
   width: 230px;
-  height: 22px;
-  font-size: 20px;
+  height: 28px;
+  font-size: 24px;
   box-shadow: 0 0 .2rem #fff,
       0 0 .2rem #fff,
       0 0 15px #13a0fe,
