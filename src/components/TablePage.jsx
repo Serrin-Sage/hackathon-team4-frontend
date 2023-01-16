@@ -1,6 +1,6 @@
-const TablePage = () => {
+const TablePage = ({ employeeView }) => {
     return (
-        <div>
+        <div className={employeeView}>
             <div className="table-1" id="table-1">
                 <div className="chair-1" id="1">
                 </div>
