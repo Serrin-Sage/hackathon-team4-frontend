@@ -1,0 +1,22 @@
+.manager-main-container {
+    width: 80vw;
+    height: 90vh;
+    border: solid 4px #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.staff-list {
+    display: flex;
+    flex-direction: column;
+    
+}
+.other-buttons {
+    display: grid;
+}
+.display-item {
+    padding: 20px;
+    background-color: grey;
+    margin: 1px;
+}
