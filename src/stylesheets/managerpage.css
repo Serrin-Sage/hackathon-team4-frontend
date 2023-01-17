@@ -28,6 +28,7 @@
     display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 2px;
+    transform: translateX(120px);
 }
 
 .grid-item {
@@ -37,7 +38,8 @@
     padding: 20px;
     height: 45px;
     width: 95px;
-    background-color: grey;
+    /* background-color: rgb(71, 71, 71); */
+    background: linear-gradient(60deg, rgb(100, 100, 100), rgb(71, 71, 71));
     border-radius: 4px;
     font-size: 24px;
     letter-spacing: 1px;
@@ -50,7 +52,7 @@
 }
 
 #logout-btn {
-    background-color: rgb(223, 34, 34);
+    background: rgb(223, 34, 34);
 }
 
 @keyframes turn-on {
