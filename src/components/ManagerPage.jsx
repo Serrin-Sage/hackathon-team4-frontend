@@ -6,15 +6,24 @@ import AddForm from './AddForm'
 import DismissForm from './DismissForm'
 
 const ManagerPage = () => {
+    const [staff, setStaff] = useState([])
     const [viewStaff, setViewStaff] = useState(false)
     const [viewAddForm, setViewAddForm] = useState(false)
     const [viewDismissForm, setViewDimissForm] = useState(false)
     const [displayNeon, setDisplayNeon] = useState(true)
 
+    useEffect(() => {
+        fetch("http://localhost:3000/staff")
+            .then((res) => res.json())
+            .then((data) => {
+                const staffEmployee = data.filter(staff => staff.manager === false)
+                setStaff(staffEmployee)
+            })
+    }, [])
+
     const navigate = useNavigate(
         
     )
-    
     
     return (
         <div className={`manager-main-container ${displayNeon ? 'neon-on' : 'neon-off'}`}>
@@ -35,9 +44,9 @@ const ManagerPage = () => {
                 <div className='grid-item'></div>
                 <div className='grid-item' id="logout-btn" onClick={() => navigate("/")}>Logout</div>
             </div>
-            {viewStaff ? <StaffModal setViewStaff={setViewStaff}/> : null}
-            {viewAddForm ? <AddForm /> : null}
-            {viewDismissForm ? <DismissForm /> : null}
+            {viewStaff ? <StaffModal staff={staff} setStaff={setStaff} setViewStaff={setViewStaff}/> : null}
+            {viewAddForm ? <AddForm setViewAddForm={setViewAddForm}/> : null}
+            {viewDismissForm ? <DismissForm staff={staff} setViewDimissForm={setViewDimissForm}/> : null}
         </div>
     )
 }

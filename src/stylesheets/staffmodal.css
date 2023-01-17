@@ -102,12 +102,44 @@
         border-radius: 10px;
 }
 
+
+
+/*** DISMISS FORM ***/
 .dismiss-container {
     position: absolute;
-        height: fit-content;
-        padding-bottom: 20px;
-        padding: 2rem;
-        background-color: grey;
-        border: solid 4px #fff;
-        border-radius: 10px;
+    height: fit-content;
+    padding-bottom: 20px;
+    padding: 2rem;
+    background-color: rgba(46, 46, 46, 0.938);
+    border: solid 4px #fff;
+    border-radius: 10px;
+    right: 480px;
+    cursor: default;
 }
+.dismiss-container h2 {
+    text-decoration: underline;
+}
+.dismiss-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        justify-content: center;
+}
+
+.dismiss-x {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.staffer-name {
+    font-size: 25px;
+    width: 150px;
+    margin-bottom: 1rem;
+    padding: 10px;
+}
+.staffer-name:hover {
+    box-shadow: inset 0 0 10px #000000;
+    border-radius: 5px;
+}
+
