@@ -1,0 +1,18 @@
+.staff-modal-container {
+    position: absolute;
+    height: fit-content;
+    padding-bottom: 20px;
+    padding: 2rem;
+    background-color: grey;
+    border: solid 4px #fff;
+    border-radius: 10px;
+}
+
+.exit-button {
+    cursor: pointer;
+    
+}
+
+.table-headers {
+    text-decoration: underline;
+}

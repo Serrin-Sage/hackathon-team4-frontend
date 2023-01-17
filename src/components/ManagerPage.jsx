@@ -1,10 +1,15 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import TablePage from "./TablePage"
-
+import StaffModal from './StaffModal'
 const ManagerPage = () => {
     const [staff, setStaff] = useState([])
-    let employeeView = "manager-view"
+    const [viewStaff, setViewStaff] = useState(false)
+    const [displayNeon, setDisplayNeon] = useState(true)
 
+    const navigate = useNavigate(
+        
+    )
     useEffect(() => {
         fetch("http://localhost:3000/staff")
         .then((res) => res.json())
@@ -15,35 +20,25 @@ const ManagerPage = () => {
     },[setStaff])
     
     return (
-        <div className="manager-main-container">
+        <div className={`manager-main-container ${displayNeon ? 'neon-on' : 'neon-off'}`}>
             <div className="table-screen">
                 TABLE VIEW WILL GO HERE
             </div>
             <div className="staff-screen">
-                <div className='staff-list'>
-                    {
-                        staff.map((staffer) => {
-                            return (
-                                <div key={staffer.id} className="staff-item">
-                                    {staffer.name} <span>{staff.section}</span>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-                <div className='other-buttons'>
-                    <div className='display-item'>Add Staff</div>
-                    <div className='display-item'></div>
-                    <div className='display-item'></div>
-                    <div className='display-item'></div>
-                    <div className='display-item'></div>
-                    <div className='display-item'></div>
-                    <div className='display-item'></div>
-                    <div className='display-item'></div>
-                    <div className='display-item'></div>
-                </div>
+                <div className='grid-item'></div>
+                <div className='grid-item'></div>
+                <div className='grid-item'></div>
+                <div className='grid-item' id="neon-btn" onClick={() => setDisplayNeon((current) => !current)}>{displayNeon ? "Neon: Off" : "Neon: On"}</div>
+                <div className='grid-item' id="view-btn" onClick={() => setViewStaff(true)}>View Staff</div>
+                <div className='grid-item'></div>
+                <div className='grid-item'></div>
+                <div className='grid-item'></div>
+                <div className='grid-item' id="add-btn">Add Staff</div>
+                <div className='grid-item' id="dimiss-btn">Dismiss Staff</div>
+                <div className='grid-item'></div>
+                <div className='grid-item' id="logout-btn" onClick={() => navigate("/")}>Logout</div>
             </div>
-            
+            {viewStaff ? <StaffModal staff={staff} setViewStaff={setViewStaff}/> : null}
         </div>
     )
 }

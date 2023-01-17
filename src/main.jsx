@@ -6,6 +6,7 @@ import './index.css'
 import './stylesheets/landingpage.css'
 import './stylesheets/tablepage.css'
 import './stylesheets/managerpage.css'
+import './stylesheets/staffmodal.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
