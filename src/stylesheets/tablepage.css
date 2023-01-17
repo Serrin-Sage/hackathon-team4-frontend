@@ -183,3 +183,7 @@
     width: 80px;
     height: 80px;
 }
+
+#table-1:hover {
+    /* border: solid 2px red; */
+}

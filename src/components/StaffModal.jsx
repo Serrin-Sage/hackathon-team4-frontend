@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 
-const StaffModal = ({ setViewStaff }) => {
-    const [staff, setStaff] = useState([])
+const StaffModal = ({ staff, setStaff, setViewStaff }) => {
     const [selectedStaff, setSelectedStaff] = useState({})
     const [showAssignForm, setShowAssignForm] = useState(false)
 
@@ -16,19 +15,8 @@ const StaffModal = ({ setViewStaff }) => {
                 return staffer
             }
         })
-        console.log(sectionInput)
         setStaff(newArray)
     }
-
-
-    useEffect(() => {
-        fetch("http://localhost:3000/staff")
-            .then((res) => res.json())
-            .then((data) => {
-                const staffEmployee = data.filter(staff => staff.manager === false)
-                setStaff(staffEmployee)
-            })
-    }, [])
 
     const handleClick = ( clickedStaff ) => {
         setSelectedStaff(clickedStaff)
@@ -62,6 +50,7 @@ const StaffModal = ({ setViewStaff }) => {
                 section: e.target.section.value
             })
         })
+        //If response OK do the below actions
         setSectionInput(e.target.section.value)
         updateSection(selectedStaff.id, e.target.section.value)
         setShowAssignForm(false)
