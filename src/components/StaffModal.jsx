@@ -7,6 +7,20 @@ const StaffModal = ({ setViewStaff }) => {
 
     let [sectionInput, setSectionInput] = useState("")
 
+    const updateSection = (id, value) => {
+        
+        let newArray = staff.map((staffer) => {
+            if (staffer.id === id) {
+                return {...staffer, section : value}
+            } else {
+                return staffer
+            }
+        })
+        console.log(sectionInput)
+        setStaff(newArray)
+    }
+
+
     useEffect(() => {
         fetch("http://localhost:3000/staff")
             .then((res) => res.json())
@@ -49,7 +63,7 @@ const StaffModal = ({ setViewStaff }) => {
             })
         })
         setSectionInput(e.target.section.value)
-        setSelectedStaff({...selectedStaff, section : sectionInput})
+        updateSection(selectedStaff.id, e.target.section.value)
         setShowAssignForm(false)
     }
 
@@ -70,7 +84,7 @@ const StaffModal = ({ setViewStaff }) => {
                         staff.map((staffer) => {
                             return (
                                 <tr key={staffer.id}>
-                                    <td className={staff.clocked_in ? "clocked-in" : "clocked-out"} onClick={() => handleClick(staffer)}>{staffer.name}</td>
+                                    <td className={staffer.clocked_in ? "clocked-in" : "clocked-out"} onClick={() => handleClick(staffer)}>{staffer.name}</td>
                                     <td >{staffer.clocked_in ? "✅" : "❌"}</td>
                                     <td>{staffer.section}</td>
                                 </tr>

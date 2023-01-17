@@ -6,11 +6,13 @@ import MenuPage from './components/menu/MenuPage'
 import ManagerPage from './components/ManagerPage'
 
 function App() {
+  const [currentStaff, setCurrentStff] = useState({})
+
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/menu" element={<MenuPage />} />
+        <Route path="/" element={<LandingPage setCurrentStff={setCurrentStff}/>} />
+        <Route path="/menu" element={<MenuPage currentStaff={currentStaff}/>} />
         <Route path="/manager" element={<ManagerPage />} />
       </Routes>
     </div>
