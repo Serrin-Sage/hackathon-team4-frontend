@@ -1,3 +1,20 @@
+.ramen-title {
+  letter-spacing: 5px;
+  font-size: 40px;
+  text-shadow:
+      0 0 0 #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #bc13fe,
+      0 0 82px #bc13fe,
+      0 0 92px #bc13fe,
+      0 0 102px #bc13fe,
+      0 0 151px #bc13fe;
+}
+.flicker-letter {
+  animation: flicker 3s infinite alternate;
+}
+
 .login-container {
   display: flex;
   align-items: center;
@@ -107,4 +124,35 @@
       0 0 5px #13a0fe,
       inset 0 0 10px #13a0fe;
   border: solid 0.5px #fff;
+  background-color: black;
+}
+
+
+@keyframes flicker {
+
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+
+    text-shadow:
+        0 0 0 #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #bc13fe,
+        0 0 82px #bc13fe,
+        0 0 92px #bc13fe,
+        0 0 102px #bc13fe,
+        0 0 151px #bc13fe;
+
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
 }
