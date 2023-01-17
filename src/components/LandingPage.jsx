@@ -10,8 +10,8 @@ const LandingPage = () => {
     fetch(`http://localhost:3000/staff/${input}`)
       .then(res => res.json())
       .then(data => {
-        if (data.is_manager === true) navigate('/manager')
-        else if (data.is_manager === false) navigate('/menu')
+        if (data.manager === true) navigate('/manager')
+        else if (data.manager === false) navigate('/menu')
       })
       .catch(() => console.log("OOPS"))
   }
