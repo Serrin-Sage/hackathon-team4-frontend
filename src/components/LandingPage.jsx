@@ -12,10 +12,14 @@ const LandingPage = ({ setCurrentStff }) => {
       .then(res => res.json())
       .then(data => {
         if (data.manager === true) navigate('/manager')
+
+        
+
         else if (data.manager === false) {
           setCurrentStff(data)
           navigate('/menu')
         }
+
       })
       .catch(() => console.log("No Such Route"))
   }
