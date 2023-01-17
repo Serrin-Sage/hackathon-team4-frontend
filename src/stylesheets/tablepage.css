@@ -1,215 +1,185 @@
 .table-1 {
-    background: blue;
+    background-image: url("https://media.istockphoto.com/id/1183955880/photo/brown-smooth-wood-surface.jpg?s=612x612&w=0&k=20&c=nCgifq2jwcnCB-06bDrA9IoZQNsorM-Yd42yAEzrO00=");
     position: absolute;
-    top: 100px;
-    left: 150px;
-    width: 200px;
-    height: 120px;
+    top: 80px;
+    left: 160px;
+    width: 130px;
+    height: 60px;
 }
 
 .chair-1 {
-    background: red;
     position: absolute;
-    top: -52px;
-    left: 150px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%
+    top: -60px;
+    left: 70px;
+    width: 80px;
+    height: 80px;
 }
 
 .chair-2 {
-    background: red;
     position: absolute;
-    top: -52px;
-    left: 5px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%
+     top: -60px;
+     left: -15px;
+     width: 80px;
+     height: 80px;
 }
 
 .chair-3 {
-    background: red;
     position: absolute;
-    top: 121px;
-    left: 5px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%
+    top: 40px;
+    left: -15px;
+    width: 80px;
+    height: 80px;
 }
 
 .chair-4 {
-    background: red;
     position: absolute;
-    top: 121px;
-    left: 150px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%
+    top: 40px;
+    left: 70px;
+    width: 80px;
+    height: 80px;
+
 }
 
 
 .table-2 {
-    background: blue;
+    background-image: url("https://media.istockphoto.com/id/1183955880/photo/brown-smooth-wood-surface.jpg?s=612x612&w=0&k=20&c=nCgifq2jwcnCB-06bDrA9IoZQNsorM-Yd42yAEzrO00=");
     position: absolute;
-    top: 500px;
-    left: 150px;
-    width: 200px;
-    height: 120px;
+    top: 270px;
+    left: 160px;
+    width: 130px;
+    height: 60px;
 }
 
 .table-3 {
-    background: blue;
+    background-image: url("https://media.istockphoto.com/id/1183955880/photo/brown-smooth-wood-surface.jpg?s=612x612&w=0&k=20&c=nCgifq2jwcnCB-06bDrA9IoZQNsorM-Yd42yAEzrO00=");
     position: absolute;
-    top: 100px;
-    left: 450px;
-    width: 100px;
-    height: 120px;
+    top: 80px;
+    left: 400px;
+    width: 70px;
+    height: 70px;
 }
 
 .chair-1a {
-    background: red;
     position: absolute;
-    top: -52px;
-    left: 27px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%
+    top: -60px;
+    left: -4px;
+    width: 80px;
+    height: 80px;
 }
 
 .chair-2a {
-    background: red;
     position: absolute;
-    top: 121px;
-    left: 27px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%
+    top: 50px;
+    left: 0px;
+    width: 80px;
+    height: 80px;
+   
 }
 
 .table-4 {
-    background: blue;
+    background-image: url("https://media.istockphoto.com/id/1183955880/photo/brown-smooth-wood-surface.jpg?s=612x612&w=0&k=20&c=nCgifq2jwcnCB-06bDrA9IoZQNsorM-Yd42yAEzrO00=");
     position: absolute;
-    top: 500px;
-    left: 450px;
-    width: 100px;
-    height: 120px;
+    top: 270px;
+    left: 400px;
+    width: 70px;
+    height: 70px;
 }
 
 .table-5 {
-    background: blue;
+    background-image: url("https://media.istockphoto.com/id/1183955880/photo/brown-smooth-wood-surface.jpg?s=612x612&w=0&k=20&c=nCgifq2jwcnCB-06bDrA9IoZQNsorM-Yd42yAEzrO00=");
     position: absolute;
-    top: 60px;
-    left: 827px;
-    width: 150px;
-    height: 150px;
+    top: 440px;
+    left: 177px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%
 }
 
 .chair-1b {
-    background: red;
     position: absolute;
     top: -40px;
-    left: 110px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%
+    left: 60px;
+    width: 80px;
+    height: 80px;
+    transform: rotate(45deg)
 }
 
 .chair-2b {
-    background: red;
     position: absolute;
-    top: -40px;
-    left: -10px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%
+    top: -35px;
+    left: -45px;
+    width: 80px;
+    height: 80px;
+    transform: rotate(305deg)
 }
 
 .chair-3b {
-    background: red;
     position: absolute;
-    top: 150px;
-    left: -10px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%
+    top: 65px;
+    left: -40px;
+    width: 80px;
+    height: 80px;
+    transform: rotate(45deg)
+    
 }
 
 .chair-4b {
-    background: red;
     position: absolute;
-    top: 150px;
-    left: 110px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%
+    top: 63px;
+    left: 60px;
+    width: 80px;
+    height: 80px;
+    transform: rotate(325deg)
 }
 
 .table-6 {
-    background: blue;
+    background-image: url("https://media.istockphoto.com/id/1183955880/photo/brown-smooth-wood-surface.jpg?s=612x612&w=0&k=20&c=nCgifq2jwcnCB-06bDrA9IoZQNsorM-Yd42yAEzrO00=");
     position: absolute;
-    top: 60px;
-    left: 1170px;
-    width: 150px;
-    height: 150px;
+    top: 440px;
+    left: 390px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%
 }
 
 .table-7 {
-    background: blue;
-    position: absolute;
-    top: 340px;
-    left: 1000px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%
-}
-
-.table-8 {
-    background: blue;
+    background-image: url("https://media.istockphoto.com/id/1183955880/photo/brown-smooth-wood-surface.jpg?s=612x612&w=0&k=20&c=nCgifq2jwcnCB-06bDrA9IoZQNsorM-Yd42yAEzrO00=");
     position: absolute;
     top: 670px;
-    left: 800px;
-    width: 580px;
-    height: 70px;
+    left: 160px;
+    width: 400px;
+    height: 40px;
 }
 
 .chair-1c {
-    background: red;
     position: absolute;
-    top: -52px;
-    left: 40px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%
+    top: -58px;
+    left: -15px;
+    width: 80px;
+    height: 80px;
+    
 }
 
 .chair-2c {
-    background: red;
     position: absolute;
-    top: -52px;
-    left: 190px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%
+    top: -58px;
+    left: 100px;
+    width: 80px;
+    height: 80px;
 }
 
 .chair-3c {
-    background: red;
     position: absolute;
-    top: -52px;
-    left: 340px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%
+    top: -58px;
+    left: 220px;
+    width: 80px;
+    height: 80px;
 }
 
 .chair-4c {
-    background: red;
     position: absolute;
-    top: -52px;
-    left: 480px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%
+    top: -58px;
+    left: 330px;
+    width: 80px;
+    height: 80px;
 }
