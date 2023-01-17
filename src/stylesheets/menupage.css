@@ -1,0 +1,31 @@
+.menu-page {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+#menu-item-bar {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    justify-self: start;
+    flex-grow: 1;
+    width: 100%;
+    margin: 3em;
+}
+
+#menu-items-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li.menu-category-name {
+    float: left;
+}
+
+li.menu-category-name button {
+    display: block;
+}

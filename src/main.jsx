@@ -5,6 +5,7 @@ import App from './App'
 import './index.css'
 import './stylesheets/landingpage.css'
 import './stylesheets/tablepage.css'
+import './stylesheets/menupage.css'
 import './stylesheets/managerpage.css'
 import './stylesheets/staffmodal.css'
 
