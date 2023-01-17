@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useNavigate } from "react-router-dom"
+import { json, useNavigate } from "react-router-dom"
 import MenuCategoryNavBar from './MenuCategoryNavBar'
 import MenuItemsContainer from './MenuItemsContainer'
 import TableOrder from './TableOrder'
@@ -7,18 +7,10 @@ import TableOrder from './TableOrder'
 // navigates from clicking on one Table div
 
 const MenuPage = ({ currentStaff }) => {
-    console.log(currentStaff)
-
+    
     useEffect(() => {
-        fetch(`http://localhost:3000/staff/${currentStaff.id}`, {
-            method: "PATCH",
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-            },
-            body: JSON.stringify({
-                clocked_in: true
-            })
+        fetch(`http://localhost:3000/staff/${currentStaff.id}/clock_in`, {
+            method: "PATCH"
         })
     },[])
 

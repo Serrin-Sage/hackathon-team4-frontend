@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+
 const LandingPage = ({ setCurrentStff }) => {
   const [admin, setAdmin] = useState(false)
   const [input, setInput] = useState("")
@@ -16,7 +17,7 @@ const LandingPage = ({ setCurrentStff }) => {
           navigate('/menu')
         }
       })
-      .catch(() => console.log("OOPS"))
+      .catch(() => console.log("No Such Route"))
   }
 
   return (
