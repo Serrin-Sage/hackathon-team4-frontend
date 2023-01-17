@@ -1,22 +1,97 @@
+/*** VIEW ALL STAFF FORM ***/
 .staff-modal-container {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(180px);
     height: fit-content;
+    width: 400px;
     padding-bottom: 20px;
     padding: 2rem;
-    background-color: grey;
-    border: solid 4px #fff;
+    background-color: rgb(68, 68, 68);
+    border: solid 2px #fff;
     border-radius: 10px;
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 0.5rem #13cffe,
+            0 0 0.1rem #13cffe,
+            0 0 2rem #13cffe,
+            inset 0 0 1rem #13cffe;
+    cursor: default;
 }
-
-.exit-button {
-    cursor: pointer;
+.staff-list-title {
+    margin: 0;
+    margin-bottom: 1.2rem;
     
 }
-
-.table-headers {
+.exit-button {
+    cursor: pointer;
+    transform: translate3d(205px, -20px, 0);
+    text-shadow: 0 0 0 #fff,
+      0 0 10px rgb(255, 0, 0),
+      0 0 21px #fff,
+      0 0 42px #fe1313,
+      0 0 82px #fe1313,
+      0 0 92px #fe1313,
+      0 0 102px #fe1313,
+      0 0 151px #fe1313;;
+}
+.table-row-top {
     text-decoration: underline;
+    font-size: 24px;
+    letter-spacing: 1.3px;
+}
+.table-header {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+.clocked-in {
+    color: green;
+    font-size: 20px;
+    padding: 5px;
+}
+.clocked-in:hover {
+    box-shadow: inset 0 0 10px #000000;
+    border-radius: 5px;
+}
+.clocked-out {
+    color: red;
+    font-size: 20px;
+    padding: 5px;
+}
+.clocked-out:hover {
+    box-shadow: inset 0 0 10px #000000;
+        border-radius: 5px;
 }
 
+/*** ASSIGN TABLE FORM ***/
+.assign-table-form {
+    position: absolute;
+    width: fit-content;
+    background-color: rgb(46, 46, 46);
+    color: #fff;
+    font-size: 22px;
+    padding: 1rem;
+    border: solid 1px #fff;
+    border-radius: 15px;
+    /* box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 .2rem #71009e,
+            0 0 0.8rem #71009e,
+            0 0 2rem #71009e,
+            inset 0 0 1.3rem #71009e; */
+}
+.assign-exit {
+    position: relative;
+    font-size: 18px;
+}
+.assign-table-form input {
+    width: 100px;
+    height: 25px;
+}
+
+/*** ADD STAFF FORM ***/
 .add-form-container {
     position: absolute;
         height: fit-content;
@@ -26,7 +101,6 @@
         border: solid 4px #fff;
         border-radius: 10px;
 }
-
 
 .dismiss-container {
     position: absolute;
