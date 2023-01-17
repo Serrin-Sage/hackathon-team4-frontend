@@ -2,9 +2,14 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import TablePage from "./TablePage"
 import StaffModal from './StaffModal'
+import AddForm from './AddForm'
+import DismissForm from './DismissForm'
+
 const ManagerPage = () => {
     const [staff, setStaff] = useState([])
     const [viewStaff, setViewStaff] = useState(false)
+    const [viewAddForm, setViewAddForm] = useState(false)
+    const [viewDismissForm, setViewDimissForm] = useState(false)
     const [displayNeon, setDisplayNeon] = useState(true)
 
     const navigate = useNavigate(
@@ -33,12 +38,14 @@ const ManagerPage = () => {
                 <div className='grid-item'></div>
                 <div className='grid-item'></div>
                 <div className='grid-item'></div>
-                <div className='grid-item' id="add-btn">Add Staff</div>
-                <div className='grid-item' id="dimiss-btn">Dismiss Staff</div>
+                <div className='grid-item' id="add-btn" onClick={() => setViewAddForm(true)}>Add Staff</div>
+                <div className='grid-item' id="dimiss-btn" onClick={() => setViewDimissForm(true)}>Dismiss Staff</div>
                 <div className='grid-item'></div>
                 <div className='grid-item' id="logout-btn" onClick={() => navigate("/")}>Logout</div>
             </div>
             {viewStaff ? <StaffModal staff={staff} setViewStaff={setViewStaff}/> : null}
+            {viewAddForm ? <AddForm /> : null}
+            {viewDismissForm ? <DismissForm /> : null}
         </div>
     )
 }

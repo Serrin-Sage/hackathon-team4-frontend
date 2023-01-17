@@ -1,7 +1,7 @@
 const DismissForm = () => {
 
     return (
-        <div>
+        <div className="dismiss-container">
 
         </div>
     )
