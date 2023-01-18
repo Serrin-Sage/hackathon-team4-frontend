@@ -21,7 +21,7 @@ const MenuCategoryNavBar = ({ renderCurrentItems, allMenuItems }) => {
     
     return (
         <nav id="menu-item-bar">
-            {categories.map(category => <MenuItemCategoryTile  category = {category} setCurrCategory = {setCurrCategory}/>)}
+            {categories.map((category, i) => <MenuItemCategoryTile  category = {category} setCurrCategory = {setCurrCategory} key = {i}/>)}
             {currCategory==='Beverage'?<MenuItemsContainer category = {'Beverage'}/>:null}
             {currCategory==='Entree'?<MenuItemsContainer category = {'Entree'}/>:null}
             {currCategory==='Appetizer'?<MenuItemsContainer category = {'Appetizer'}/>:null}
