@@ -5,7 +5,7 @@ import StaffModal from './StaffModal'
 import AddForm from './AddForm'
 import DismissForm from './DismissForm'
 
-const ManagerPage = () => {
+const ManagerPage = ({ currentStaff }) => {
     const [staff, setStaff] = useState([])
     const [viewStaff, setViewStaff] = useState(false)
     const [viewAddForm, setViewAddForm] = useState(false)
@@ -22,7 +22,7 @@ const ManagerPage = () => {
             }
         }
         fetchStaff()
-    }, [])
+    }, [currentStaff])
 
     const navigate = useNavigate(
         
@@ -52,8 +52,10 @@ const ManagerPage = () => {
                             setStaff={setStaff} 
                             setViewStaff={setViewStaff}
                             displayNeon={displayNeon}/> : null}
-            {viewAddForm ? <AddForm setViewAddForm={setViewAddForm}/> : null}
-            {viewDismissForm ? <DismissForm staff={staff} setViewDimissForm={setViewDimissForm}/> : null}
+            {viewAddForm ? <AddForm setViewAddForm={setViewAddForm} displayNeon={displayNeon} /> : null}
+            {viewDismissForm ? <DismissForm staff={staff} 
+                                            setViewDimissForm={setViewDimissForm}
+                                            displayNeon={displayNeon}/> : null}
         </div>
     )
 }

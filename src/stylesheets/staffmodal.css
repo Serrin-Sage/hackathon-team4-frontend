@@ -4,7 +4,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: fit-content;
+    height: 500px;
+    overflow: auto;
     width: 400px;
     padding-bottom: 20px;
     padding: 2rem;
@@ -24,21 +25,21 @@
 }
 .staff-modal-container.neon-off {
     position: absolute;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        transform: translateX(180px);
-        height: fit-content;
-        width: 400px;
-        padding-bottom: 20px;
-        padding: 2rem;
-        background-color: rgba(46, 46, 46, 0.938);
-        border: solid 2px #fff;
-        border-radius: 10px;
-        cursor: default;
-        left: 700px;
-        animation: slide-in 0.2s;
-        animation-fill-mode: forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    overflow: auto;
+    width: 400px;
+    padding-bottom: 20px;
+    padding: 2rem;
+    background-color: rgba(46, 46, 46, 0.938);
+    border: solid 2px #fff;
+    border-radius: 10px;
+    cursor: default;
+    left: 700px;
+    animation: slide-in 0.2s;
+    animation-fill-mode: forwards;
 }
 .staff-list-title {
     margin: 1rem;
@@ -52,7 +53,8 @@
     right: 12px;
     height: 25px;
     width: 25px;
-    padding-top: 1px;
+    font-size: 15px;
+    padding-top: 2px;
     border-radius: 50%;
     border: solid 1px #fff;
     text-shadow: 0 0 0 #fff,
@@ -71,11 +73,11 @@
     right: 12px;
     height: 25px;
     width: 25px;
-    padding-top: 1px;
+    font-size: 15px;
+    padding-top: 2px;
     border-radius: 50%;
     border: solid 1px #fff;
 }
-
 
 .table-row-top {
     text-decoration: underline;
@@ -106,7 +108,26 @@
 }
 
 /*** ASSIGN TABLE FORM ***/
-.assign-table-form {
+.assign-table-form.neon-on {
+    position: fixed;
+    top: 300px;
+    width: fit-content;
+    background-color: rgba(46, 46, 46, 0.938);
+    color: #fff;
+    font-size: 22px;
+    padding: 1rem;
+    border: solid 1px #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 .2rem #71009e,
+            0 0 0.8rem #71009e,
+            0 0 2rem #71009e,
+            inset 0 0 1.3rem #71009e;
+    animation: slide-in 0.2s;
+    animation-fill-mode: forwards;
+}
+.assign-table-form.neon-off {
     position: absolute;
     width: fit-content;
     background-color: rgba(46, 46, 46, 0.938);
@@ -115,16 +136,8 @@
     padding: 1rem;
     border: solid 1px #fff;
     border-radius: 15px;
-    /* box-shadow: 0 0 .2rem #fff,
-            0 0 .2rem #fff,
-            0 0 .2rem #71009e,
-            0 0 0.8rem #71009e,
-            0 0 2rem #71009e,
-            inset 0 0 1.3rem #71009e; */
-}
-.assign-exit {
-    position: relative;
-    font-size: 18px;
+    animation: slide-in 0.2s;
+    animation-fill-mode: forwards;
 }
 .assign-table-form input {
     width: 100px;
@@ -132,36 +145,135 @@
 }
 
 /*** ADD STAFF FORM ***/
-.add-form-container {
+.add-form-container.neon-on {
     position: absolute;
     height: fit-content;
     padding-bottom: 20px;
     padding: 2rem;
+    padding-top: 4rem;
     background-color: rgba(46, 46, 46, 0.938);
-    border: solid 4px #fff;
+    border: solid 2px #fff;
     border-radius: 10px;
-    right: 300px;
+    right: 340px;
+    font-size: 20px;
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 0.5rem #13cffe,
+            0 0 0.1rem #13cffe,
+            0 0 2rem #13cffe,
+            inset 0 0 1rem #13cffe;
+    animation: slide-in 0.2s;
+    animation-fill-mode: forwards;
 }
-.add-exit {
+.add-form-container.neon-off {
     position: absolute;
-    top: 5px;
-    right: 10px;
-    cursor: pointer;
+    height: fit-content;
+    padding-bottom: 20px;
+    padding: 2rem;
+    padding-top: 4rem;
+    background-color: rgba(46, 46, 46, 0.938);
+    border: solid 2px #fff;
+    border-radius: 10px;
+    right: 340px;
+    font-size: 20px;
+    animation: slide-in 0.2s;
+    animation-fill-mode: forwards;
 }
 
+.add-btn.neon-on {
+    width: 80px;
+    height: 40px;
+    font-size: 18px;
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 .2rem #00c241,
+            0 0 0.8rem #00c241,
+            0 0 10px #00c241,
+            inset 0 0 12px #00c241;
+    border: solid 2px #fff;
+    border-radius: 20px;
+} 
+.add-btn.neon-on:active {
+    font-size: 16px;
+    box-shadow: 0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 .2rem #00c241,
+        0 0 0.8rem #00c241,
+        0 0 10px #00c241,
+        inset 0 0 12px #007928;
+}
+
+.add-btn.neon-off {
+    width: 80px;
+    height: 40px;
+    font-size: 18px;
+    border: solid 2px #fff;
+    border-radius: 20px;
+}
+.add-btn.neon-off:active {
+    font-size: 16px;
+    box-shadow: inset 0 0 10px #000000;
+}
+
+
+.add-form-input.neon-on {
+    margin: 8px;
+    width: 200px;
+    height: 25px;
+    font-size: 20px;
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 .2rem #71009e,
+            0 0 0.8rem #71009e,
+            0 0 10px #71009e,
+            inset 0 0 12px #71009e;
+    border: solid 0.5px #fff;
+    background-color: rgba(15, 15, 15, 0.938);
+    text-align: center;
+}
+.add-form-input.neon-off {
+    margin: 8px;
+    width: 200px;
+    height: 25px;
+    font-size: 20px;
+    border: solid 0.5px #fff;
+    background-color: rgba(15, 15, 15, 0.938);
+    text-align: center;
+}
 
 
 /*** DISMISS FORM ***/
-.dismiss-container {
+.dismiss-container.neon-on {
     position: absolute;
     height: fit-content;
     padding-bottom: 20px;
     padding: 2rem;
     background-color: rgba(46, 46, 46, 0.938);
-    border: solid 4px #fff;
+    border: solid 2px #fff;
     border-radius: 10px;
     right: 300px;
     cursor: default;
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 0.5rem #13cffe,
+            0 0 0.1rem #13cffe,
+            0 0 2rem #13cffe,
+            inset 0 0 1rem #13cffe;
+    animation: slide-in 0.2s;
+    animation-fill-mode: forwards;
+}
+.dismiss-container.neon-off {
+    position: absolute;
+    height: fit-content;
+    padding-bottom: 20px;
+    padding: 2rem;
+    background-color: rgba(46, 46, 46, 0.938);
+    border: solid 2px #fff;
+    border-radius: 10px;
+    right: 300px;
+    cursor: default;
+    animation: slide-in 0.2s;
+    animation-fill-mode: forwards;
 }
 .dismiss-container h2 {
     text-decoration: underline;
@@ -172,13 +284,6 @@
     align-items: center;
     justify-content: center;
 }
-
-.dismiss-x {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-}
-
 .staffer-name {
     font-size: 25px;
     width: 150px;
@@ -194,9 +299,8 @@
     position: absolute;
     border: solid 4px #fff;
     border-radius: 10px;
-    background-color: rgba(46, 46, 46, 0.938);
-    top: 60px;
     left: 150px;
+    background-color: rgba(46, 46, 46, 0.938);
     animation: slide-in 0.2s;
     animation-fill-mode: forwards;
 }
