@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<LandingPage setCurrentStff={setCurrentStff}/>} />
-        <Route path="/menu" element={<MenuCategoryNavBar currentStaff={currentStaff}/>} />
+        <Route path="/menu" element={<MenuPage currentStaff={currentStaff}/>} />
         <Route path="/manager" element={<ManagerPage />} />
         {/* <Route path="/Beverage" element={<MenuItemsContainer category = {'Beverage'}/>} />
         <Route path="/Entree" element={<MenuItemsContainer category = {'Entree'}/>} />

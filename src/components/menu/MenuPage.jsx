@@ -38,7 +38,7 @@ const MenuPage = ({ currentStaff }) => {
     return (
         <div className="menu-page">
             <MenuCategoryNavBar allMenuItems={allMenuItems}/>
-            <MenuItemsContainer currentCategoryItems={currentCategoryItems}/>
+            {/* <MenuItemsContainer currentCategoryItems={currentCategoryItems}/> */}
             <TableOrder />
         </div>
     )
