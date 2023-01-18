@@ -94,12 +94,19 @@
 /*** ADD STAFF FORM ***/
 .add-form-container {
     position: absolute;
-        height: fit-content;
-        padding-bottom: 20px;
-        padding: 2rem;
-        background-color: grey;
-        border: solid 4px #fff;
-        border-radius: 10px;
+    height: fit-content;
+    padding-bottom: 20px;
+    padding: 2rem;
+    background-color: rgba(46, 46, 46, 0.938);
+    border: solid 4px #fff;
+    border-radius: 10px;
+    right: 300px;
+}
+.add-exit {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
 }
 
 
