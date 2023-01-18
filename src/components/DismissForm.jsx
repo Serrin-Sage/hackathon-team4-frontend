@@ -18,7 +18,7 @@ const DismissForm = ({ staff, setViewDimissForm }) => {
     const ConfirmDismiss = () => {
         
         return (
-            <div>
+            <div className="confirm-container">
                 Confirm Clock Out For: {selectStaffer.name}
                 <div className="confirm-btns">
                     <button onClick={() => dismissStaffer()}>Yes</button>

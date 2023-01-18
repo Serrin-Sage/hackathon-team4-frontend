@@ -47,7 +47,11 @@ const ManagerPage = () => {
                 <div className='grid-item'></div>
                 <div className='grid-item' id="logout-btn" onClick={() => navigate("/")}>Logout</div>
             </div>
-            {viewStaff ? <StaffModal staff={staff} setStaff={setStaff} setViewStaff={setViewStaff}/> : null}
+            {viewStaff ? <StaffModal 
+                            staff={staff} 
+                            setStaff={setStaff} 
+                            setViewStaff={setViewStaff}
+                            displayNeon={displayNeon}/> : null}
             {viewAddForm ? <AddForm setViewAddForm={setViewAddForm}/> : null}
             {viewDismissForm ? <DismissForm staff={staff} setViewDimissForm={setViewDimissForm}/> : null}
         </div>
