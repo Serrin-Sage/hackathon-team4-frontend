@@ -38,9 +38,9 @@ const StaffModal = ({ staff, setStaff, setViewStaff }) => {
         )
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        fetch(`http://localhost:3000/assign_section/${selectedStaff.id}`, {
+        let req = await fetch(`http://localhost:3000/assign_section/${selectedStaff.id}`, {
             method: "PATCH",    
             headers: {
                 "Content-Type" : "application/json",
@@ -50,10 +50,14 @@ const StaffModal = ({ staff, setStaff, setViewStaff }) => {
                 section: e.target.section.value
             })
         })
-        //If response OK do the below actions
-        setSectionInput(e.target.section.value)
-        updateSection(selectedStaff.id, e.target.section.value)
-        setShowAssignForm(false)
+        let res = await req.json()
+        if (req.ok) {
+            setSectionInput(e.target.section.value)
+            updateSection(selectedStaff.id, e.target.section.value)
+            setShowAssignForm(false)
+        } else {
+            console.log(req.errors)
+        }
     }
 
     return (

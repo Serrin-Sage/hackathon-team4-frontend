@@ -13,12 +13,15 @@ const ManagerPage = () => {
     const [displayNeon, setDisplayNeon] = useState(true)
 
     useEffect(() => {
-        fetch("http://localhost:3000/staff")
-            .then((res) => res.json())
-            .then((data) => {
-                const staffEmployee = data.filter(staff => staff.manager === false)
+        const fetchStaff = async () => {
+            let req = await fetch("http://localhost:3000/staff")
+            let res = await req.json()
+            if (req.ok) {
+                const staffEmployee = res.filter(staff => staff.manager === false)
                 setStaff(staffEmployee)
-            })
+            }
+        }
+        fetchStaff()
     }, [])
 
     const navigate = useNavigate(
