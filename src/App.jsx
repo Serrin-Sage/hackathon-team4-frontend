@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage setCurrentStff={setCurrentStff}/>} />
         <Route path="/menu" element={<MenuPage currentStaff={currentStaff}/>} />
-        <Route path="/manager" element={<ManagerPage />} />
+        <Route path="/manager" element={<ManagerPage currentStaff={currentStaff}/>} />
         <Route path="/Beverage" element={<MenuItemsContainer category = {'beverages'}/>} />
         <Route path="/Entree" element={<MenuItemsContainer category = {'entrees'}/>} />
         <Route path="/Dessert" element={<MenuItemsContainer category = {'desserts'}/>} />

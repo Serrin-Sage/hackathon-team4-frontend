@@ -25,8 +25,8 @@ const StaffModal = ({ staff, setStaff, setViewStaff, displayNeon }) => {
     
     const AssignSection = () => {
         return (
-            <div className="assign-table-form">
-                <div onClick={() => setShowAssignForm(false)} className="assign-exit">X</div>
+            <div className={`assign-table-form ${displayNeon ? 'neon-on' : 'neon-off'}`}>
+                <div onClick={() => setShowAssignForm(false)} className={`exit-button ${displayNeon ? 'neon-on' : 'neon-off'}`}>X</div>
                 <br />
                 Assign {selectedStaff.name} to a section
                 <br/>
