@@ -10,18 +10,12 @@ const DismissForm = ({ staff, setViewDimissForm, displayNeon }) => {
         setClockedInStaff(staffEmployee)
     },[])
     
-    const updateClockIn = (id) => {
-        let newClockInArray = staff.map((staffer) => {
-            if (staffer.id !== id) {
-                return {...staffer, clocked_in : true }
-            } else {
-                return staffer
-            }
+    const updateClockIn = (id, value) => {
+        setClockedInStaff((prevState) => {
+            return [...prevState.filter((toRemove) => {
+                return toRemove.id !== id
+            })]
         })
-        let filterClockIn = clockedInStaff.filter((staffer) => {
-            staffer.id !== id
-        })
-        setClockedInStaff(filterClockIn)
     }
     
     const handleClick = ( clickedStaffer ) => {
@@ -50,6 +44,7 @@ const DismissForm = ({ staff, setViewDimissForm, displayNeon }) => {
         if (req.ok){
             console.log(`${selectedStaffer.name} has been dismissed`)
             updateClockIn(selectedStaffer.id)
+            setShowConfirm(false)
         }
     }
 
