@@ -7,7 +7,6 @@ const StaffModal = ({ staff, setStaff, setViewStaff, displayNeon }) => {
     let [sectionInput, setSectionInput] = useState("")
 
     const updateSection = (id, value) => {
-        
         let newArray = staff.map((staffer) => {
             if (staffer.id === id) {
                 return {...staffer, section : value}

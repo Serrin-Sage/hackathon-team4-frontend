@@ -1,6 +1,6 @@
 const TablePage = ({ employeeView }) => {
     return (
-        <div className={employeeView}>
+        <div className="table-container">
             <div className="table-1" id="table-1" >
                 <img src="src/assets/new-chair.png" className="chair-1" id="1">
                 </img>

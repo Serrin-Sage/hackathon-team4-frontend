@@ -1,16 +1,20 @@
+.table-container {
+    height: 80vh;
+}
+
 .table-1 {
     background-image: url("https://media.istockphoto.com/id/1183955880/photo/brown-smooth-wood-surface.jpg?s=612x612&w=0&k=20&c=nCgifq2jwcnCB-06bDrA9IoZQNsorM-Yd42yAEzrO00=");
     position: absolute;
     top: 80px;
     left: 160px;
-    width: 130px;
-    height: 60px;
+    width: 120px;
+    height: 50px;
 }
 
 .chair-1 {
     position: absolute;
     top: -60px;
-    left: 70px;
+    left: 60px;
     width: 80px;
     height: 80px;
 }
@@ -18,14 +22,14 @@
 .chair-2 {
     position: absolute;
      top: -60px;
-     left: -15px;
+     left: -18px;
      width: 80px;
      height: 80px;
 }
 
 .chair-3 {
     position: absolute;
-    top: 40px;
+    top: 30px;
     left: -15px;
     width: 80px;
     height: 80px;
@@ -33,8 +37,8 @@
 
 .chair-4 {
     position: absolute;
-    top: 40px;
-    left: 70px;
+    top: 30px;
+    left: 60px;
     width: 80px;
     height: 80px;
 
@@ -44,10 +48,10 @@
 .table-2 {
     background-image: url("https://media.istockphoto.com/id/1183955880/photo/brown-smooth-wood-surface.jpg?s=612x612&w=0&k=20&c=nCgifq2jwcnCB-06bDrA9IoZQNsorM-Yd42yAEzrO00=");
     position: absolute;
-    top: 270px;
+    top: 225px;
     left: 160px;
-    width: 130px;
-    height: 60px;
+    width: 120px;
+    height: 50px;
 }
 
 .table-3 {
@@ -55,22 +59,22 @@
     position: absolute;
     top: 80px;
     left: 400px;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
 }
 
 .chair-1a {
     position: absolute;
     top: -60px;
-    left: -4px;
+    left: -16px;
     width: 80px;
     height: 80px;
 }
 
 .chair-2a {
     position: absolute;
-    top: 50px;
-    left: 0px;
+    top: 30px;
+    left: -13px;
     width: 80px;
     height: 80px;
    
@@ -79,29 +83,29 @@
 .table-4 {
     background-image: url("https://media.istockphoto.com/id/1183955880/photo/brown-smooth-wood-surface.jpg?s=612x612&w=0&k=20&c=nCgifq2jwcnCB-06bDrA9IoZQNsorM-Yd42yAEzrO00=");
     position: absolute;
-    top: 270px;
+    top: 220px;
     left: 400px;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
 }
 
 .table-5 {
     background-image: url("https://media.istockphoto.com/id/1183955880/photo/brown-smooth-wood-surface.jpg?s=612x612&w=0&k=20&c=nCgifq2jwcnCB-06bDrA9IoZQNsorM-Yd42yAEzrO00=");
     position: absolute;
-    top: 440px;
+    top: 350px;
     left: 177px;
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
     border-radius: 50%
 }
 
 .chair-1b {
     position: absolute;
-    top: -40px;
-    left: 60px;
+    top: -35px;
+    left: 50px;
     width: 80px;
     height: 80px;
-    transform: rotate(45deg)
+    transform: rotate(50deg)
 }
 
 .chair-2b {
@@ -110,43 +114,43 @@
     left: -45px;
     width: 80px;
     height: 80px;
-    transform: rotate(305deg)
+    transform: rotate(310deg)
 }
 
 .chair-3b {
     position: absolute;
-    top: 65px;
+    top: 45px;
     left: -40px;
     width: 80px;
     height: 80px;
-    transform: rotate(45deg)
+    transform: rotate(50deg)
     
 }
 
 .chair-4b {
     position: absolute;
-    top: 63px;
-    left: 60px;
+    top: 45px;
+    left: 45px;
     width: 80px;
     height: 80px;
-    transform: rotate(325deg)
+    transform: rotate(316deg)
 }
 
 .table-6 {
     background-image: url("https://media.istockphoto.com/id/1183955880/photo/brown-smooth-wood-surface.jpg?s=612x612&w=0&k=20&c=nCgifq2jwcnCB-06bDrA9IoZQNsorM-Yd42yAEzrO00=");
     position: absolute;
-    top: 440px;
+    top: 350px;
     left: 390px;
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
     border-radius: 50%
 }
 
 .table-7 {
     background-image: url("https://media.istockphoto.com/id/1183955880/photo/brown-smooth-wood-surface.jpg?s=612x612&w=0&k=20&c=nCgifq2jwcnCB-06bDrA9IoZQNsorM-Yd42yAEzrO00=");
     position: absolute;
-    top: 670px;
-    left: 160px;
+    top: 560px;
+    left: 150px;
     width: 400px;
     height: 40px;
 }
