@@ -2,9 +2,9 @@
 import { useNavigate } from "react-router-dom"
 
 const MenuItemCategoryTile = ({ category }) => {
-
+    const navigate = useNavigate()
     function handleClick(){
-        useNavigate(`/${category}`)
+        navigate(`/${category}`)
     }
     return (
         <button onClick={handleClick}>
