@@ -10,7 +10,7 @@ const DismissForm = ({ staff, setViewDimissForm, displayNeon }) => {
         setClockedInStaff(staffEmployee)
     },[])
     
-    const updateClockIn = (id, value) => {
+    const updateClockIn = (id) => {
         setClockedInStaff((prevState) => {
             return [...prevState.filter((toRemove) => {
                 return toRemove.id !== id
