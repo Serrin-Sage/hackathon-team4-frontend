@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-const StaffModal = ({ staff, setStaff, setViewStaff }) => {
+const StaffModal = ({ staff, setStaff, setViewStaff, displayNeon }) => {
     const [selectedStaff, setSelectedStaff] = useState({})
     const [showAssignForm, setShowAssignForm] = useState(false)
 
@@ -61,8 +61,8 @@ const StaffModal = ({ staff, setStaff, setViewStaff }) => {
     }
 
     return (
-        <div className="staff-modal-container">
-            <div className="exit-button" onClick={() => setViewStaff(false)} >X</div>
+        <div className={`staff-modal-container ${displayNeon ? 'neon-on' : 'neon-off'}`}>
+            <div className={`exit-button ${displayNeon ? 'neon-on' : 'neon-off'}`} onClick={() => setViewStaff(false)} >X</div>
             <h2 className="staff-list-title">Staff List</h2>
             <table>
                 <thead>
