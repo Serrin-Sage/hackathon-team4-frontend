@@ -2,6 +2,7 @@
     width: 80vw;
     height: 90vh;
     border: solid 4px #fff;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -19,6 +20,7 @@
     width: 80vw;
     height: 90vh;
     border: solid 4px #fff;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;

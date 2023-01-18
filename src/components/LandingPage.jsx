@@ -13,8 +13,6 @@ const LandingPage = ({ setCurrentStff }) => {
       .then(data => {
         if (data.manager === true) navigate('/manager')
 
-        
-
         else if (data.manager === false) {
           setCurrentStff(data)
           navigate('/menu')
@@ -25,7 +23,7 @@ const LandingPage = ({ setCurrentStff }) => {
   }
 
   return (
-    <div>
+    <div className="login-container">
       <h1 className="ramen-title">R<span className="flicker-letter">A</span>MEN</h1>
       <div className="input-container">
         <form onSubmit={handleSubmit}>

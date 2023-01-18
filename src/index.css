@@ -39,3 +39,8 @@ body {
   margin: 0;
   font-family: Avenir;
 }
+
+.App {
+  height: 100%;
+  width: auto;
+}
