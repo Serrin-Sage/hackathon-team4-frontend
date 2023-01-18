@@ -1,15 +1,14 @@
-const MenuItemCategoryTile = ({ renderCurrentItems, allMenuItems }) => {
-    // const [ category, id, name, order_id, price, stock_remaining ] = allMenuItems
 
-    function handleClick(e) {
-        // renderCurrentItems(category)
-        // on click, console.log all items with category selected
-        console.log(e.target.value)
+import { useNavigate } from "react-router-dom"
+
+const MenuItemCategoryTile = ({ category }) => {
+
+    function handleClick(){
+        useNavigate(`/${category}`)
     }
-
     return (
-        <button onClick={handleClick} value={allMenuItems.category}>
-            <h2>Beverages</h2>
+        <button onClick={handleClick}>
+            <h2>{category}</h2>
         </button>
     )
 }

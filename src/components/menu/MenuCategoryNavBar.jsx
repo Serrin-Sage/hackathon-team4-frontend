@@ -2,9 +2,13 @@ import MenuItemCategoryTile from "./MenuItemCategoryTile"
 
 const MenuCategoryNavBar = ({ renderCurrentItems, allMenuItems }) => {
 
-    const selectedMenuItems = allMenuItems.filter(function filterByCategory(items) {
-        return items.category === "bev"
-    })
+    const [categories, setCategories] = useState([])
+
+    function getCategories(){
+        fetch('http://localhost:3000/categories')
+        .then(res => res.json())
+        .then(data => setCategories(data))
+    }
 
     // const avatars = convo.users.filter(u => {
     //     return u.username !== user.username
@@ -14,10 +18,7 @@ const MenuCategoryNavBar = ({ renderCurrentItems, allMenuItems }) => {
     
     return (
         <nav id="menu-item-bar">
-            <ul id="menu-items-list">
-                <li className="menu-category-name">
-                </li>
-            </ul>
+            {categories.categories.map(category => <MenuItemCategoryTile  category = {category}/>)}
         </nav>
     )
 }
