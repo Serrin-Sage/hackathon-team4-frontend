@@ -12,6 +12,8 @@ const ManagerPage = ({ currentStaff }) => {
     const [viewDismissForm, setViewDimissForm] = useState(false)
     const [displayNeon, setDisplayNeon] = useState(true)
 
+    const navigate = useNavigate()
+
     useEffect(() => {
         const fetchStaff = async () => {
             let req = await fetch("http://localhost:3000/staff")
@@ -22,12 +24,20 @@ const ManagerPage = ({ currentStaff }) => {
             }
         }
         fetchStaff()
-    }, [currentStaff])
 
-    const navigate = useNavigate(
-        
-    )
+    }, [])
     
+    const updateStaffStatus = (id, value) => {
+        let updatedArray = staff.map((staffer) => {
+            if (staffer.id === id) {
+                return {...staffer, clocked_in : value}
+            } else {
+                return staffer
+            }
+        })
+        setStaff(updatedArray)
+    }
+
     return (
         <div className={`manager-main-container ${displayNeon ? 'neon-on' : 'neon-off'}`}>
             <div className="table-screen">
@@ -53,7 +63,7 @@ const ManagerPage = ({ currentStaff }) => {
                             setViewStaff={setViewStaff}
                             displayNeon={displayNeon}/> : null}
             {viewAddForm ? <AddForm setViewAddForm={setViewAddForm} displayNeon={displayNeon} /> : null}
-            {viewDismissForm ? <DismissForm staff={staff} 
+            {viewDismissForm ? <DismissForm updateStaffStatus={updateStaffStatus}
                                             setViewDimissForm={setViewDimissForm}
                                             displayNeon={displayNeon}/> : null}
         </div>

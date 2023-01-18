@@ -1,12 +1,15 @@
 /*** VIEW ALL STAFF FORM ***/
+.staff-modal-container::-webkit-scrollbar {
+    display: none;
+}
 .staff-modal-container.neon-on {
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 500px;
-    overflow: auto;
+    height: 400px;
     width: 400px;
+    overflow: auto;
     padding-bottom: 20px;
     padding: 2rem;
     background-color: rgba(46, 46, 46, 0.938);
@@ -19,7 +22,7 @@
             0 0 2rem #13cffe,
             inset 0 0 1rem #13cffe;
     cursor: default;
-    left: 700px;
+    left: 650px;
     animation: slide-in 0.2s;
     animation-fill-mode: forwards;
 }
@@ -28,16 +31,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 500px;
-    overflow: auto;
+    height: 400px;
     width: 400px;
+    overflow: auto;
     padding-bottom: 20px;
     padding: 2rem;
     background-color: rgba(46, 46, 46, 0.938);
     border: solid 2px #fff;
     border-radius: 10px;
     cursor: default;
-    left: 700px;
+    left: 650px;
     animation: slide-in 0.2s;
     animation-fill-mode: forwards;
 }
@@ -129,6 +132,7 @@
 }
 .assign-table-form.neon-off {
     position: absolute;
+    top: 300px;
     width: fit-content;
     background-color: rgba(46, 46, 46, 0.938);
     color: #fff;
@@ -243,9 +247,13 @@
 
 
 /*** DISMISS FORM ***/
+.dismiss-container::-webkit-scrollbar {
+    display: none;
+}
 .dismiss-container.neon-on {
     position: absolute;
-    height: fit-content;
+    height: 300px;
+    overflow: auto;
     padding-bottom: 20px;
     padding: 2rem;
     background-color: rgba(46, 46, 46, 0.938);

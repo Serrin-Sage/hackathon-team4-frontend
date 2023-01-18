@@ -1,14 +1,20 @@
 import { useEffect, useState } from "react"
 
-const DismissForm = ({ staff, setViewDimissForm, displayNeon }) => {
+const DismissForm = ({ updateStaffStatus, setViewDimissForm, displayNeon }) => {
     const [showConfirm, setShowConfirm] = useState(false)
     const [selectedStaffer, setSelectedStaffer] = useState({})
     const [clockedInStaff, setClockedInStaff] = useState([])
     
     useEffect(() => {
-        const staffEmployee = staff.filter(staff => staff.clocked_in === true)
-        setClockedInStaff(staffEmployee)
-    },[])
+        const fetchClockedIn = async () => {
+            let req = await fetch("http://localhost:3000/clocked_in_staff")
+            let res = await req.json()
+            if (req.ok) {
+                setClockedInStaff(res)
+            }
+        }
+        fetchClockedIn()
+    }, [])
     
     const updateClockIn = (id) => {
         setClockedInStaff((prevState) => {
@@ -44,6 +50,7 @@ const DismissForm = ({ staff, setViewDimissForm, displayNeon }) => {
         if (req.ok){
             console.log(`${selectedStaffer.name} has been dismissed`)
             updateClockIn(selectedStaffer.id)
+            updateStaffStatus(selectedStaffer.id)
             setShowConfirm(false)
         }
     }
@@ -69,7 +76,6 @@ const DismissForm = ({ staff, setViewDimissForm, displayNeon }) => {
                 </div>
                 }
             </div>
-            
         </div>
     )
 }
