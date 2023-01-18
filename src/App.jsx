@@ -16,10 +16,10 @@ function App() {
         <Route path="/" element={<LandingPage setCurrentStff={setCurrentStff}/>} />
         <Route path="/menu" element={<MenuCategoryNavBar currentStaff={currentStaff}/>} />
         <Route path="/manager" element={<ManagerPage />} />
-        <Route path="/Beverage" element={<MenuItemsContainer category = {'Beverage'}/>} />
+        {/* <Route path="/Beverage" element={<MenuItemsContainer category = {'Beverage'}/>} />
         <Route path="/Entree" element={<MenuItemsContainer category = {'Entree'}/>} />
         <Route path="/Dessert" element={<MenuItemsContainer category = {'Dessert'}/>} />
-        <Route path="/Appetizer" element={<MenuItemsContainer category = {'Appetizer'}/>} />
+        <Route path="/Appetizer" element={<MenuItemsContainer category = {'Appetizer'}/>} /> */}
       </Routes>
     </div>
   )

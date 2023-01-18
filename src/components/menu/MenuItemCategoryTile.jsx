@@ -1,13 +1,7 @@
 
-import { useNavigate } from "react-router-dom"
-
-const MenuItemCategoryTile = ({ category }) => {
-    const navigate = useNavigate()
-    function handleClick(){
-        navigate(`/${category}`)
-    }
+const MenuItemCategoryTile = ({ category, setCurrCategory }) => {
     return (
-        <button onClick={handleClick}>
+        <button onClick={()=>setCurrCategory(category)}>
             <h2>{category}</h2>
         </button>
     )
