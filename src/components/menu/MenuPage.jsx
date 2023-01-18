@@ -15,17 +15,29 @@ const MenuPage = ({ currentStaff }) => {
     },[])
 
     const [currentCategoryItems, setcurrentCategoryItems] = useState(false)
+    const [allMenuItems, setAllMenuItems] = useState([])
 
     // useEffect to fetch the menu data, map over each item in list for button
+    useEffect(() => {
+        fetch('http://localhost:3000/menu_items')
+        .then(res => {
+            if (res.ok) {
+                res.json().then((data) => setAllMenuItems(data))
+            } else {
+                return res.text().then((text) => Promise.reject(text))
+            }
+        })
+    }, [])
 
-    function renderCurrentItems(selectedItemCategoryName) {
-        const selectedItemCategory = allItems.find(items => (items.category === selectedItemCategoryName))
-        setcurrentCategoryItems(selectedItemCategory)
-    }
+    // function renderCurrentItems(selectedItemCategoryName) {
+    //     const selectedItemCategory = allMenuItems.find(items => (items.category === selectedItemCategoryName))
+    //     console.log(selectedItemCategory)
+    //     // setcurrentCategoryItems(selectedItemCategory)
+    // }
 
     return (
         <div className="menu-page">
-            <MenuCategoryNavBar renderCurrentItems={renderCurrentItems} />
+            <MenuCategoryNavBar allMenuItems={allMenuItems}/>
             <MenuItemsContainer currentCategoryItems={currentCategoryItems}/>
             <TableOrder />
         </div>
