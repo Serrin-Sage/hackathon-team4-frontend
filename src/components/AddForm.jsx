@@ -1,8 +1,8 @@
-const AddForm = ({ setViewAddForm }) => {
+const AddForm = ({ setViewAddForm, displayNeon }) => {
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        fetch("http://localhost:3000/staff", {
+        let req = await fetch("http://localhost:3000/staff", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -11,19 +11,37 @@ const AddForm = ({ setViewAddForm }) => {
             body: JSON.stringify({
                 name: e.target.name.value,
                 password: e.target.password.value,
-                manager: e.target.manager.value
+                manager: e.target.manager.checked
             })
         })
+        let res = req.json()
+        if (req.ok) {
+            setViewAddForm(false)
+        }
     }
 
     return (
-        <div className="add-form-container">
-            <div className="add-exit" onClick={() => setViewAddForm(false)}>X</div>
-            <form onSubmit={handleSubmit}>
-                <input type="text" name="name"/> <br/>
-                <input type="text" name="password"/> <br/>
-                <input type="text" name="manager"/> <br/>
-                <input type="submit" value="Add" />
+        <div className={`add-form-container ${displayNeon ? 'neon-on' : 'neon-off'}`}>
+            <div className={`exit-button ${displayNeon ? 'neon-on' : 'neon-off'}`} onClick={() => setViewAddForm(false)}>X</div>
+            <form onSubmit={handleSubmit} autoComplete="new-password">
+                <label>
+                    Enter Employee Name <br/>
+                    <input type="text" name="name" autoComplete="off" className={`add-form-input ${displayNeon ? 'neon-on' : 'neon-off'}`}/> <br/>
+                </label>
+                <br/>
+                <label>
+                    Set Default Password <br/>
+                    <input type="password" name="password" className={`add-form-input ${displayNeon ? 'neon-on' : 'neon-off'}`} /> <br/>
+                </label>
+                <br/>
+                <label>
+                    Manager?
+                </label>
+                <input type="checkbox" name="manager"/> 
+                <br/>
+                <br/>
+
+                <input type="submit" value="Add" className={`add-btn ${displayNeon ? 'neon-on' : 'neon-off'}`} />
             </form>
         </div>
     )

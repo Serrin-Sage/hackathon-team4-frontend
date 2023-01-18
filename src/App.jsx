@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage setCurrentStff={setCurrentStff}/>} />
         <Route path="/menu" element={<MenuPage currentStaff={currentStaff}/>} />
-        <Route path="/manager" element={<ManagerPage />} />
+        <Route path="/manager" element={<ManagerPage currentStaff={currentStaff}/>} />
       </Routes>
     </div>
   )
