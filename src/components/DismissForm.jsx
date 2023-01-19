@@ -34,6 +34,8 @@ const DismissForm = ({ updateStaffStatus, setViewDimissForm, displayNeon }) => {
         return (
             <div className="confirm-container">
                 Confirm Clock Out For: {selectedStaffer.name}
+                <br/>
+                <br/>
                 <div className="confirm-btns">
                     <button onClick={() => dismissStaffer()}>Yes</button>
                     <button onClick={() => setShowConfirm(false)}>No</button>
@@ -56,26 +58,29 @@ const DismissForm = ({ updateStaffStatus, setViewDimissForm, displayNeon }) => {
     }
 
     return (
-        <div className={`dismiss-container ${displayNeon ? 'neon-on' : 'neon-off'}`}>
-            <div className={`exit-button ${displayNeon ? 'neon-on' : 'neon-off'}`} onClick={() => setViewDimissForm(false)}>X</div>
-            <h2>Select Staff to Clock Out</h2>
-            <div className="dismiss-list">
-                {clockedInStaff.length === 0 ? <div>No Staff Currently Clocked In</div> : 
-                <div>
-                    {
-                        clockedInStaff.map((staffer) => {
-                            return (
-                                <div key={staffer.id} className="staffer-name" onClick={() => handleClick(staffer)}>
-                                    {staffer.name}
-                                    
-                                </div>
-                            )
-                        })
-                    } 
-                    {showConfirm ? <ConfirmDismiss /> : null}
+        <div className="modal-container">
+            <div className={`dismiss-container ${displayNeon ? 'neon-on' : 'neon-off'}`}>
+                <div className={`exit-button ${displayNeon ? 'neon-on' : 'neon-off'}`} onClick={() => setViewDimissForm(false)}>X</div>
+                <h2>Select Staff to Clock Out</h2>
+                <div className="dismiss-list">
+                    {clockedInStaff.length === 0 ? <div>No Staff Currently Clocked In</div> : 
+                    <div>
+                        {
+                            clockedInStaff.map((staffer) => {
+                                return (
+                                    <div key={staffer.id} className="staffer-name" onClick={() => handleClick(staffer)}>
+                                        {staffer.name}
+                                        
+                                    </div>
+                                )
+                            })
+                        } 
+                    </div>
+                    }
                 </div>
-                }
             </div>
+
+            {showConfirm ? <ConfirmDismiss /> : null}
         </div>
     )
 }

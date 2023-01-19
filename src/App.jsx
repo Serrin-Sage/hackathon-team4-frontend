@@ -3,6 +3,9 @@ import { Routes, Route } from 'react-router-dom'
 import LandingPage from './components/LandingPage'
 import TablePage from './components/TablePage'
 import MenuPage from './components/menu/MenuPage'
+
+import NewMenuPage from './components/NewMenuPage'
+
 import ManagerPage from './components/ManagerPage'
 import MenuItemsContainer from './components/menu/MenuItemsContainer'
 import MenuCategoryNavBar from './components/menu/MenuCategoryNavBar'
@@ -14,7 +17,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<LandingPage setCurrentStaff={setCurrentStaff}/>} />
-        <Route path="/menu" element={<MenuPage currentStaff={currentStaff}/>} />
+        <Route path="/menu" element={<NewMenuPage currentStaff={currentStaff}/>} />
         <Route path="/manager" element={<ManagerPage />} />
       </Routes>
     </div>
