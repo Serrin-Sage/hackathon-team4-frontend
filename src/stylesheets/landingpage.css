@@ -14,6 +14,9 @@
 .flicker-letter {
   animation: flicker 3s infinite alternate;
 }
+.sublte-flicker-letter {
+  animation: subtle-flicker 2s infinite alternate;
+}
 
 .login-container {
   display: flex;
@@ -101,4 +104,32 @@
   55% {
     text-shadow: none;
   }
+}
+
+@keyframes subtle-flicker {
+    0%,
+    15%,
+    22%,
+    26%,
+    55%,
+    70%,
+    100%{
+  
+      text-shadow:
+        0 0 0 #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #bc13fe,
+        0 0 82px #bc13fe,
+        0 0 92px #bc13fe,
+        0 0 102px #bc13fe,
+        0 0 151px #bc13fe;
+  
+    }
+  
+    20%,
+    30%,
+    60% {
+      text-shadow: none;
+    }
 }

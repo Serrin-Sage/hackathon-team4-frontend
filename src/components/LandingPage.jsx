@@ -24,7 +24,7 @@ const LandingPage = ({ setCurrentStaff }) => {
 
   return (
     <div className="login-container">
-      <h1 className="ramen-title">R<span className="flicker-letter">A</span>MEN</h1>
+      {/* <h1 className="ramen-title">R<span className="flicker-letter">A</span>MEN WAI<span className="sublte-flicker-letter">T</span>ER</h1> */}
       <div className="input-container">
         <form onSubmit={handleSubmit}>
           <label className="input-label">
