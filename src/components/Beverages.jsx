@@ -20,6 +20,7 @@ const Beverages = ({ setSelectedItemList }) => {
             return [...prevState, drink]
         })
     }
+    
     return (
         <div className="item-list-container">
             {
