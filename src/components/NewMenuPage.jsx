@@ -67,9 +67,15 @@ const NewMenuPage = ({ currentStaff }) => {
     function clearOrder(x) {
         setSelectedItemList(x)
     }
+
+    function getTotal(){
+        let total = 0
+        selectedItemList.map(item => total+= item.price)
+        setTotal(total)
+    }
     return (
         <div className="menu-page-container">
-            <MenuHeader currentStaff={currentStaff} handleSetCurrentTable={handleSetCurrentTable} getOrder={getOrder}/>
+            <MenuHeader currentStaff={currentStaff} handleSetCurrentTable={handleSetCurrentTable} getOrder={getOrder} getTotal = {getTotal}/>
             <div className="menu-page-content">
                 <Receipt selectedItemList={selectedItemList} total = {total} currentTable={currentTable} clearOrder={clearOrder} clearTotal={clearTotal}/>
                 <div className="category-page">

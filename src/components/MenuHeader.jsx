@@ -11,13 +11,14 @@
             // const section = determineSection(currentStaff);
             // console.log(section)
 let tables = {1:[1,2],2: [3,4], 3:[5,6], 4:[7]}
-const MenuHeader = ({ currentStaff, handleSetCurrentTable, getOrder }) => {
+const MenuHeader = ({ currentStaff, handleSetCurrentTable, getOrder, getTotal }) => {
 
 function switchTables(id){
     handleSetCurrentTable(id)
     fetch(`http://localhost:3000/table/${id}/currentorder`)
     .then(res => res.json())
     .then(data => getOrder(data))
+    getTotal()
 }
     return (
         <div className="menu-header">
