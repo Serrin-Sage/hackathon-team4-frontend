@@ -21,11 +21,11 @@ const Beverages = ({ setSelectedItemList }) => {
         })
     }
     return (
-        <div>
+        <div className="item-list-container">
             {
                 beverageList.map((drink) => {
                     return (
-                        <div key={drink.id} onClick={() => addBevToOrder(drink)}>
+                        <div key={drink.id} className="menu-item" onClick={() => addBevToOrder(drink)}>
                             {drink.name}
                         </div>
                     )

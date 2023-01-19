@@ -63,3 +63,29 @@ li.menu-category-name button {
 }
 
 
+.menu-content {
+    border: solid 2px #fff;
+    padding: 10px;
+}
+
+/*** BEVERAGES ***/
+.item-list-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+}
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 30px;
+    width: 80px;
+    /* background-color: rgb(71, 71, 71); */
+    background: linear-gradient(60deg, rgb(100, 100, 100), rgb(71, 71, 71));
+    border-radius: 4px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
