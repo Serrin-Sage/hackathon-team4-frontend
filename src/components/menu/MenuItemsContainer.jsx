@@ -22,7 +22,7 @@ const MenuItemsContainer = ({ category }) => {
     return (
         <div>
             <button onClick = {navClick}>Back to Menu</button>
-            {menuItems.map(item => <MenuItemTile  item = {item}/>)}
+            {menuItems.map(item => <MenuItemTile  item = {item} key = {item.id}/>)}
         </div>
     )
 }

@@ -16,6 +16,7 @@ const MenuPage = ({ currentStaff }) => {
 
     const [currentCategoryItems, setcurrentCategoryItems] = useState(false)
     const [allMenuItems, setAllMenuItems] = useState([])
+    const [serverTables, setServerTables] = useState([])
 
     // useEffect to fetch the menu data, map over each item in list for button
     useEffect(() => {
@@ -34,7 +35,11 @@ const MenuPage = ({ currentStaff }) => {
     //     console.log(selectedItemCategory)
     //     // setcurrentCategoryItems(selectedItemCategory)
     // }
-
+    useEffect(() =>
+        fetch(`http//localhost3000/staff/${currentStaff.id}/tables`)
+        .then(res=> res.json())
+        .then(data=> setServerTables(data)), []
+    )
     return (
         <div className="menu-page">
             <MenuCategoryNavBar allMenuItems={allMenuItems}/>
