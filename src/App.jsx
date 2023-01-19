@@ -19,7 +19,6 @@ function App() {
         <Route path="/" element={<LandingPage setCurrentStaff={setCurrentStaff}/>} />
         <Route path="/menu" element={<NewMenuPage currentStaff={currentStaff}/>} />
         <Route path="/manager" element={<ManagerPage />} />
-        
       </Routes>
     </div>
   )
