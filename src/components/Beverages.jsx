@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-const Beverages = ({ setSelectedItemList }) => {
+const Beverages = ({ setSelectedItemList, addToTotal }) => {
     const [beverageList, setBeverageList] = useState([])
 
     useEffect(() => {
@@ -17,6 +17,7 @@ const Beverages = ({ setSelectedItemList }) => {
 
     const addBevToOrder = (drink) => {
         setSelectedItemList((prevState) => {
+            addToTotal(drink.price)
             return [...prevState, drink]
         })
     }
