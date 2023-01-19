@@ -36,6 +36,7 @@ const NewMenuPage = ({ currentStaff }) => {
             setShowDesserts(true)
         }
     }
+    
     return (
         <div className="menu-page-container">
             <MenuHeader currentStaff={currentStaff}/>
