@@ -1,4 +1,4 @@
-.menu-page {
+/* .menu-page {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -28,4 +28,38 @@ li.menu-category-name {
 
 li.menu-category-name button {
     display: block;
+} */
+
+.menu-page-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80vw;
+    height: 90vh;
+    border: solid 4px #fff;
+    border-radius: 20px;
+    cursor: default;
 }
+
+.menu-page-content {
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+}
+
+.menu-header {
+    margin: 2rem;
+}
+
+.category-page {
+    display: flex;
+    flex-direction: column;
+}
+.category-labels {
+    display: flex;
+}
+.category-page div{
+    margin: 0 1rem 0 0;
+}
+
+
