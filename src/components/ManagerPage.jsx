@@ -62,7 +62,7 @@ const ManagerPage = ({ currentStaff }) => {
                             setStaff={setStaff} 
                             setViewStaff={setViewStaff}
                             displayNeon={displayNeon}/> : null}
-            {viewAddForm ? <AddForm setViewAddForm={setViewAddForm} displayNeon={displayNeon} /> : null}
+            {viewAddForm ? <AddForm setViewAddForm={setViewAddForm} displayNeon={displayNeon} setStaff={setStaff}/> : null}
             {viewDismissForm ? <DismissForm updateStaffStatus={updateStaffStatus}
                                             setViewDimissForm={setViewDimissForm}
                                             displayNeon={displayNeon}/> : null}
