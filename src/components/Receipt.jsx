@@ -20,21 +20,25 @@ const Receipt = ({ selectedItemList, total, currentTable, clearOrder, clearTotal
     
     
     return (
-        <div>
-            Order for table: {currentTable}
-            <ul>
-                {
-                    selectedItemList.map((item) => {
-                        return (
-                            <li>    
-                                {`${item.name}:  $${item.price}`}
-                            </li>
-                        )
-                    })
-                }
-            </ul>
-            <p>Total: ${total}</p>
-            <button onClick = {createOrder}>Create Order</button>
+        <div className="receipt-container">
+            <h3>Order for table: {currentTable}</h3>
+            <div className="receipt-content">
+                <ul className="receipt-item-list">
+                    {
+                        selectedItemList.map((item) => {
+                            return (
+                                <li className="receipt-item">    
+                                    {`${item.name}:  $${item.price}`}
+                                    <hr></hr>
+                                </li>
+                               
+                            )
+                        })
+                    }
+                </ul>
+            </div>
+            <h2>Total: ${total}</h2>
+            <button onClick = {createOrder} className="create-order-btn">Create Order</button>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-const AddForm = ({ setViewAddForm, displayNeon }) => {
+const AddForm = ({ setViewAddForm, displayNeon, setStaff }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -10,12 +10,16 @@ const AddForm = ({ setViewAddForm, displayNeon }) => {
             },
             body: JSON.stringify({
                 name: e.target.name.value,
-                password: e.target.password.value,
+                password: "defaultPassword",
                 manager: e.target.manager.checked
             })
         })
-        let res = req.json()
+        let res = await req.json()
         if (req.ok) {
+            console.log(res)
+            setStaff((prevState) => {
+                return [...prevState, res]
+            })
             setViewAddForm(false)
         }
     }
@@ -29,10 +33,10 @@ const AddForm = ({ setViewAddForm, displayNeon }) => {
                     <input type="text" name="name" autoComplete="off" className={`add-form-input ${displayNeon ? 'neon-on' : 'neon-off'}`}/> <br/>
                 </label>
                 <br/>
-                <label>
+                {/* <label>
                     Set Default Password <br/>
                     <input type="password" name="password" className={`add-form-input ${displayNeon ? 'neon-on' : 'neon-off'}`} /> <br/>
-                </label>
+                </label> */}
                 <br/>
                 <label>
                     Manager?

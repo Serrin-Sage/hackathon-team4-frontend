@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 import MenuHeader from "./MenuHeader"
 import Receipt from "./Receipt"
@@ -8,6 +8,13 @@ import Entrees from "./Entrees"
 import Desserts from "./Desserts"
 
 const NewMenuPage = ({ currentStaff }) => {
+
+    useEffect(() => {
+        fetch(`http://localhost:3000/staff/${currentStaff.id}/clock_in`, {
+            method: "PATCH"
+        })
+    }, [])
+
     const [showBevs, setShowBevs] = useState(true)
     const [showApps, setShowApps] = useState(false)
     const [showEntrees, setShowEntrees] = useState(false)

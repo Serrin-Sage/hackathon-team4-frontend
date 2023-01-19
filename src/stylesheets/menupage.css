@@ -30,6 +30,8 @@ li.menu-category-name button {
     display: block;
 } */
 
+
+/*** MENU VIEW ***/
 .menu-page-container {
     display: flex;
     align-items: center;
@@ -47,7 +49,8 @@ li.menu-category-name button {
     justify-content: space-around;
 }
 .menu-header {
-    margin: 2rem;
+    margin: 1rem;
+    font-size: 25px;
 }
 .category-page {
     display: flex;
@@ -94,7 +97,7 @@ li.menu-category-name button {
 .menu-content {
     padding: 10px;
     width: 518px;
-    height: 400px;
+    height: 300px;
 }
 
 /*** BEVERAGES ***/
@@ -123,3 +126,41 @@ li.menu-category-name button {
     font-size: 16px;
 }
 
+
+/*** RECEIPT VIEW ***/
+.receipt-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 2px #fff;
+    border-radius: 10px;
+    width: 300px;
+    background: linear-gradient(60deg, rgb(29, 29, 29), rgb(0, 0, 0));
+}
+.receipt-content {
+    height: 280px;
+    width: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: auto;
+    background-color: rgba(46, 46, 46, 0.938);
+    border-radius: 10px;
+}
+.receipt-content::-webkit-scrollbar {
+    display: none;
+}
+.receipt-item-list {
+    padding: 0;
+    list-style-type: none;
+}
+.receipt-item {
+    font-size: 20px;
+}
+
+.create-order-btn {
+    margin: 5px;
+    width: 100px;
+    height: 25px;
+    font-size: 14px;
+    transform: translateY(-10px);
+}

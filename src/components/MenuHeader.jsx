@@ -22,7 +22,11 @@ function switchTables(id){
     return (
         <div className="menu-header">
             <p>Hey {currentStaff.name}, your section is {currentStaff.section}, and tables are: </p> 
+
             {currentStaff.section? tables[currentStaff.section].map(section => <button onClick={() => switchTables(section)} >{section}</button>) : <p>You currently have no section</p>}
+
+            {tables[currentStaff.section].map(section => <button onClick={() => handleSetCurrentTable(section)} >{section}</button>)}
+
         </div>
     )
 }

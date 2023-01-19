@@ -27,12 +27,14 @@ const StaffModal = ({ staff, setStaff, setViewStaff, displayNeon }) => {
             <div className={`assign-table-form ${displayNeon ? 'neon-on' : 'neon-off'}`}>
                 <div onClick={() => setShowAssignForm(false)} className={`exit-button ${displayNeon ? 'neon-on' : 'neon-off'}`}>X</div>
                 <br />
-                Assign {selectedStaff.name} to a section
+                <br />
+                <span className="assign-title">Assign {selectedStaff.name} to a section</span>
                 <br/>
                 <br/>
-                <form onSubmit={handleSubmit}>
-                    <input type="text" name="section" spellCheck={false} />
+                <form onSubmit={handleSubmit} autoComplete="new-password">
+                    <input type="text" name="section" autoComplete="off" className={`assign-input ${displayNeon ? 'neon-on' : 'neon-off'}`}/>
                 </form>
+                <br/>
             </div>
         )
     }
@@ -60,32 +62,34 @@ const StaffModal = ({ staff, setStaff, setViewStaff, displayNeon }) => {
     }
 
     return (
-        <div className={`staff-modal-container ${displayNeon ? 'neon-on' : 'neon-off'}`}>
-            <div className={`exit-button ${displayNeon ? 'neon-on' : 'neon-off'}`} onClick={() => setViewStaff(false)} >X</div>
-            <h2 className="staff-list-title">Staff List</h2>
-            <table>
-                <thead>
-                    <tr className="table-row-top">
-                        <th className="table-header">Name</th>
-                        <th className="table-header">Clocked In</th>
-                        <th className="table-header">Section</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        staff.map((staffer) => {
-                            return (
-                                <tr key={staffer.id}>
-                                    <td className={staffer.clocked_in ? "clocked-in" : "clocked-out"} onClick={() => handleClick(staffer)}>{staffer.name}</td>
-                                    <td >{staffer.clocked_in ? "✅" : "❌"}</td>
-                                    <td>{staffer.section}</td>
-                                </tr>
-                            )
-                        })
-                    }
-                </tbody>
-            </table>
+        <div className="modal-container">
+            <div className={`staff-modal-container ${displayNeon ? 'neon-on' : 'neon-off'}`}>
+                <div className={`exit-button ${displayNeon ? 'neon-on' : 'neon-off'}`} onClick={() => setViewStaff(false)} >X</div>
+                <h2 className="staff-list-title">Staff List</h2>
+                <table>
+                    <thead>
+                        <tr className="table-row-top">
+                            <th className="table-header">Name</th>
+                            <th className="table-header">Clocked In</th>
+                            <th className="table-header">Section</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            staff.map((staffer) => {
+                                return (
+                                    <tr key={staffer.id}>
+                                        <td className={staffer.clocked_in ? "clocked-in" : "clocked-out"} onClick={() => handleClick(staffer)}>{staffer.name}</td>
+                                        <td >{staffer.clocked_in ? "✅" : "❌"}</td>
+                                        <td>{staffer.section}</td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                </table>
 
+            </div>
             {showAssignForm ? <AssignSection /> : null}
         </div>
     )
