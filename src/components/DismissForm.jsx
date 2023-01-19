@@ -32,13 +32,13 @@ const DismissForm = ({ updateStaffStatus, setViewDimissForm, displayNeon }) => {
     const ConfirmDismiss = () => {
         
         return (
-            <div className="confirm-container">
+            <div className={`confirm-container ${displayNeon ? 'neon-on' : 'neon-off'}`}>
                 Confirm Clock Out For: {selectedStaffer.name}
                 <br/>
                 <br/>
                 <div className="confirm-btns">
-                    <button onClick={() => dismissStaffer()}>Yes</button>
-                    <button onClick={() => setShowConfirm(false)}>No</button>
+                    <button className={`yes-btn ${displayNeon ? 'neon-on' : 'neon-off'}`} onClick={() => dismissStaffer()}>Yes</button>
+                    <button className={`no-btn ${displayNeon ? 'neon-on' : 'neon-off'}`} onClick={() => setShowConfirm(false)}>No</button>
                 </div>
             </div>
         )
