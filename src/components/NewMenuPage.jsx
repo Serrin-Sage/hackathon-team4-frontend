@@ -4,6 +4,8 @@ import MenuHeader from "./MenuHeader"
 import Receipt from "./Receipt"
 import Beverages from "./Beverages"
 import Appetizers from "./Appetizers"
+import Entrees from "./Entrees"
+import Desserts from "./Desserts"
 
 const NewMenuPage = ({ currentStaff }) => {
     const [showBevs, setShowBevs] = useState(true)
@@ -49,14 +51,18 @@ const NewMenuPage = ({ currentStaff }) => {
                 <Receipt selectedItemList={selectedItemList} total = {total}/>
                 <div className="category-page">
                     <div className="category-labels">
-                        <div onClick={() => clickCategory("Beverages")}>Beverages</div>
-                        <div onClick={() => clickCategory("Appetizers")}>Appetizers</div>
-                        <div onClick={() => clickCategory("Entrees")}>Entrees</div>
-                        <div onClick={() => clickCategory("Desserts")}>Desserts</div>
+                        <div onClick={() => clickCategory("Beverages")} className="category-title" id={showBevs ? 'bev-tab' : 'inactive-tab'}>Beverages</div>
+                        <div onClick={() => clickCategory("Appetizers")} className="category-title" id={showApps ? 'apps-tab' : 'inactive-tab'}>Appetizers</div>
+                        <div onClick={() => clickCategory("Entrees")} className="category-title" id={showEntrees ? 'entree-tab' : 'inactive-tab'}>Entrees</div>
+                        <div onClick={() => clickCategory("Desserts")} className="category-title" id={showDesserts ? 'dessert-tab' : 'inactive-tab'}>Desserts</div>
                     </div>
                     <div className="menu-content">
+
                         {showBevs ? <Beverages addToTotal = {addToTotal} setSelectedItemList={setSelectedItemList}/> : null}
                         {showApps ? <Appetizers addToTotal = {addToTotal} setSelectedItemList={setSelectedItemList}/> : null}
+                        {showEntrees ? <Entrees setSelectedItemList={setSelectedItemList}/> : null}
+                        {showDesserts ? <Desserts setSelectedItemList={setSelectedItemList}/> : null}
+
                     </div>
                 </div>
             </div>

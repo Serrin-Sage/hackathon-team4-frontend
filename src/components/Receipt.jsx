@@ -24,8 +24,8 @@ const Receipt = ({ selectedItemList, total }) => {
                 {
                     selectedItemList.map((item) => {
                         return (
-                            <li onClick = {()=>addToTotal(item.price)}>    
-                                {item.name}: ${item.price}
+                            <li>    
+                                {`${item.name}:  $${item.price}`}
                             </li>
                         )
                     })

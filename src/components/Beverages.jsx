@@ -21,6 +21,7 @@ const Beverages = ({ setSelectedItemList, addToTotal }) => {
             return [...prevState, drink]
         })
     }
+    
     return (
         <div className="item-list-container">
             {

@@ -22,11 +22,11 @@ const Appetizers = ({ setSelectedItemList, addToTotal }) => {
     }
     
     return (
-        <div>
+        <div className="item-list-container">
             {
                 appsList.map((appetizer) => {
                     return (
-                        <div key={appetizer.id} onClick={() => addAppToOrder(appetizer)}>
+                        <div key={appetizer.id} className="menu-item" onClick={() => addAppToOrder(appetizer)}>
                             {appetizer.name}
                         </div>
                     )
