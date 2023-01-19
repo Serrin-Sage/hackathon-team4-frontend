@@ -23,7 +23,7 @@
             inset 0 0 1rem #13cffe;
     cursor: default;
     left: 650px;
-    animation: slide-in 0.2s;
+    animation: grow 0.2s;
     animation-fill-mode: forwards;
 }
 .staff-modal-container.neon-off {
@@ -41,7 +41,7 @@
     border-radius: 10px;
     cursor: default;
     left: 650px;
-    animation: slide-in 0.2s;
+    animation: grow 0.2s;
     animation-fill-mode: forwards;
 }
 .staff-list-title {
@@ -127,7 +127,7 @@
             0 0 0.8rem #71009e,
             0 0 2rem #71009e,
             inset 0 0 1.3rem #71009e;
-    animation: slide-in 0.2s;
+    animation: grow 0.2s;
     animation-fill-mode: forwards;
 }
 .assign-table-form.neon-off {
@@ -140,7 +140,7 @@
     padding: 1rem;
     border: solid 1px #fff;
     border-radius: 15px;
-    animation: slide-in 0.2s;
+    animation: grow 0.2s;
     animation-fill-mode: forwards;
 }
 .assign-table-form input {
@@ -166,7 +166,7 @@
             0 0 0.1rem #13cffe,
             0 0 2rem #13cffe,
             inset 0 0 1rem #13cffe;
-    animation: slide-in 0.2s;
+    animation: grow 0.2s;
     animation-fill-mode: forwards;
 }
 .add-form-container.neon-off {
@@ -180,7 +180,7 @@
     border-radius: 10px;
     right: 340px;
     font-size: 20px;
-    animation: slide-in 0.2s;
+    animation: grow 0.2s;
     animation-fill-mode: forwards;
 }
 
@@ -252,6 +252,8 @@
 }
 .dismiss-container.neon-on {
     position: absolute;
+    top: 140px;
+    right: 300px;
     height: 300px;
     overflow: auto;
     padding-bottom: 20px;
@@ -259,7 +261,6 @@
     background-color: rgba(46, 46, 46, 0.938);
     border: solid 2px #fff;
     border-radius: 10px;
-    right: 300px;
     cursor: default;
     box-shadow: 0 0 .2rem #fff,
             0 0 .2rem #fff,
@@ -267,7 +268,7 @@
             0 0 0.1rem #13cffe,
             0 0 2rem #13cffe,
             inset 0 0 1rem #13cffe;
-    animation: slide-in 0.2s;
+    animation: grow 0.2s;
     animation-fill-mode: forwards;
 }
 .dismiss-container.neon-off {
@@ -280,7 +281,7 @@
     border-radius: 10px;
     right: 300px;
     cursor: default;
-    animation: slide-in 0.2s;
+    animation: grow 0.2s;
     animation-fill-mode: forwards;
 }
 .dismiss-container h2 {
@@ -305,20 +306,47 @@
 
 .confirm-container {
     position: absolute;
-    border: solid 4px #fff;
+    border: solid 2px #fff;
     border-radius: 10px;
-    left: 150px;
+    padding: 0.5rem;
+    right: 270px;
+    width: 120px;
+    height: 150px;
+    font-size: 22px;
     background-color: rgba(46, 46, 46, 0.938);
-    animation: slide-in 0.2s;
+    animation: grow 0.2s, slide-over 0.2s;
     animation-fill-mode: forwards;
 }
 
+.confirm-btns {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
 
-@keyframes slide-in {
+
+.modal-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+@keyframes grow {
     0% {
         transform: scale(0);
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@keyframes slide-over {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100px);
     }
 }
