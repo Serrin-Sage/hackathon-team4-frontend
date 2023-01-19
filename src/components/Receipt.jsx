@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const Receipt = ({ selectedItemList, total, currentTable }) => {
+const Receipt = ({ selectedItemList, total, currentTable, clearOrder, clearTotal }) => {
     function createOrder(){
         fetch('http://localhost:3000/orders', {
             method: 'POST',
@@ -13,6 +13,8 @@ const Receipt = ({ selectedItemList, total, currentTable }) => {
             .then((data) => {
                 console.log('Success:', data);
             })
+            clearOrder([])
+            clearTotal()
     }
 
     

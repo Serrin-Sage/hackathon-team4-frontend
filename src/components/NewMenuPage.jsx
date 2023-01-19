@@ -44,15 +44,27 @@ const NewMenuPage = ({ currentStaff }) => {
     function addToTotal(val){
         setTotal(total + val)
     }
+
+    function clearTotal() {
+        setTotal(0)
+    }
     
     function handleSetCurrentTable(table) {
         setCurrentTable(table)
     }
+
+    function getOrder(itemList) {
+        setSelectedItemList(itemList)
+    }
+
+    function clearOrder(x) {
+        setSelectedItemList(x)
+    }
     return (
         <div className="menu-page-container">
-            <MenuHeader currentStaff={currentStaff} handleSetCurrentTable={handleSetCurrentTable}/>
+            <MenuHeader currentStaff={currentStaff} handleSetCurrentTable={handleSetCurrentTable} getOrder={getOrder}/>
             <div className="menu-page-content">
-                <Receipt selectedItemList={selectedItemList} total = {total} currentTable={currentTable}/>
+                <Receipt selectedItemList={selectedItemList} total = {total} currentTable={currentTable} clearOrder={clearOrder} clearTotal={clearTotal}/>
                 <div className="category-page">
                     <div className="category-labels">
                         <div onClick={() => clickCategory("Beverages")} className="category-title" id={showBevs ? 'bev-tab' : 'inactive-tab'}>Beverages</div>
