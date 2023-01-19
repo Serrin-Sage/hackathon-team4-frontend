@@ -49,7 +49,8 @@ li.menu-category-name button {
     justify-content: space-around;
 }
 .menu-header {
-    margin: 1.5rem;
+    margin: 1rem;
+    font-size: 25px;
 }
 .category-page {
     display: flex;
