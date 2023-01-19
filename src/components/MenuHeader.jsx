@@ -17,7 +17,7 @@ const MenuHeader = ({ currentStaff, handleSetCurrentTable }) => {
     return (
         <div className="menu-header">
             <p>Hey {currentStaff.name}, your section is {currentStaff.section}, and tables are: </p> 
-            {tables[currentStaff.section].map(section => <button onClick={() => handleSetCurrentTable(section)} >{section}</button>)}
+            {/* {tables[currentStaff.section].map(section => <button onClick={() => handleSetCurrentTable(section)} >{section}</button>)} */}
         </div>
     )
 }
