@@ -46,10 +46,10 @@ const NewMenuPage = ({ currentStaff }) => {
                 <Receipt selectedItemList={selectedItemList}/>
                 <div className="category-page">
                     <div className="category-labels">
-                        <div onClick={() => clickCategory("Beverages")} className="category-title" id="bev-tab">Beverages</div>
-                        <div onClick={() => clickCategory("Appetizers")} className="category-title" id="apps-tab">Appetizers</div>
-                        <div onClick={() => clickCategory("Entrees")} className="category-title" id="entree-tab">Entrees</div>
-                        <div onClick={() => clickCategory("Desserts")} className="category-title" id="des-tab">Desserts</div>
+                        <div onClick={() => clickCategory("Beverages")} className="category-title" id={showBevs ? 'bev-tab' : 'inactive-tab'}>Beverages</div>
+                        <div onClick={() => clickCategory("Appetizers")} className="category-title" id={showApps ? 'apps-tab' : 'inactive-tab'}>Appetizers</div>
+                        <div onClick={() => clickCategory("Entrees")} className="category-title" id={showEntrees ? 'entree-tab' : 'inactive-tab'}>Entrees</div>
+                        <div onClick={() => clickCategory("Desserts")} className="category-title" id={showDesserts ? 'dessert-tab' : 'inactive-tab'}>Desserts</div>
                     </div>
                     <div className="menu-content">
                         {showBevs ? <Beverages setSelectedItemList={setSelectedItemList}/> : null}

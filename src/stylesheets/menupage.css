@@ -46,30 +46,55 @@ li.menu-category-name button {
     width: 90%;
     justify-content: space-around;
 }
-
 .menu-header {
     margin: 2rem;
 }
-
 .category-page {
     display: flex;
     flex-direction: column;
+    border: solid 2px #fff;
+    border-radius: 10px;
+    background-color: rgba(46, 46, 46, 0.938);
 }
 .category-labels {
     display: flex;
-    justify-content: space-evenly;
+    
 }
 .category-title {
-    width: 100px;
+    min-width: 115px;
     font-size: 20px;
+    padding: 8px;
     cursor: pointer;
+    border-radius: 10px 10px 0 0;
+}
+#bev-tab {
+    border-right: solid 2px #fff;
+    border-left: solid 2px transparent;
+}
+#apps-tab {
+    border-right: solid 2px #fff;
+    border-left: solid 2px #fff;
+}
+#entree-tab {
+    border-right: solid 2px #fff;
+    border-left: solid 2px #fff;
+}
+#dessert-tab {
+    border-left: solid 2px #fff;
+    border-right: solid 2px transparent;
+}
+#inactive-tab {
+    border-bottom: solid 2px #fff;
+    border-left: solid 2px transparent;
+    border-right: solid 2px transparent;
+    background-color: rgb(32, 32, 32);
+    border-radius: 10px 10px 0 0;
 }
 
-
 .menu-content {
-    border: solid 2px #fff;
     padding: 10px;
     width: 518px;
+    height: 400px;
 }
 
 /*** BEVERAGES ***/
@@ -83,7 +108,7 @@ li.menu-category-name button {
     align-items: center;
     justify-content: center;
     padding: 22px;
-    margin: 1.5px;
+    margin: 2.5px;
     height: 30px;
     width: 80px;
     background: linear-gradient(60deg, rgb(100, 100, 100), rgb(71, 71, 71));
