@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-const LandingPage = ({ setCurrentStff }) => {
+const LandingPage = ({ setCurrentStaff }) => {
   const [admin, setAdmin] = useState(false)
   const [input, setInput] = useState("")
   const navigate = useNavigate()
@@ -14,7 +14,7 @@ const LandingPage = ({ setCurrentStff }) => {
         if (data.manager === true) navigate('/manager')
 
         else if (data.manager === false) {
-          setCurrentStff(data)
+          setCurrentStaff(data)
           navigate('/menu')
         }
 
