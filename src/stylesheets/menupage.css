@@ -52,6 +52,18 @@ li.menu-category-name button {
     margin: 1rem;
     font-size: 25px;
 }
+.staff-welcome-title {
+    margin-bottom: 0;
+}
+.no-section-title {
+    margin: 0;
+}
+.table-btns {
+    margin: 10px;
+
+}
+
+
 .category-page {
     display: flex;
     flex-direction: column;
@@ -138,7 +150,7 @@ li.menu-category-name button {
     background: linear-gradient(60deg, rgb(29, 29, 29), rgb(0, 0, 0));
 }
 .receipt-content {
-    height: 280px;
+    height: 260px;
     width: 200px;
     padding-left: 20px;
     padding-right: 20px;
