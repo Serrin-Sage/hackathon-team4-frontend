@@ -15,6 +15,7 @@ const NewMenuPage = ({ currentStaff }) => {
 
     const [selectedItemList, setSelectedItemList] = useState([])
     const [total, setTotal] = useState(0)
+    const [currentTable, setCurrentTable] = useState('')
 
     const clickCategory = (selection) => {
         if (selection === "Beverages") {
@@ -44,11 +45,14 @@ const NewMenuPage = ({ currentStaff }) => {
         setTotal(total + val)
     }
     
+    function handleSetCurrentTable(table) {
+        setCurrentTable(table)
+    }
     return (
         <div className="menu-page-container">
-            <MenuHeader currentStaff={currentStaff}/>
+            <MenuHeader currentStaff={currentStaff} handleSetCurrentTable={handleSetCurrentTable}/>
             <div className="menu-page-content">
-                <Receipt selectedItemList={selectedItemList} total = {total}/>
+                <Receipt selectedItemList={selectedItemList} total = {total} currentTable={currentTable}/>
                 <div className="category-page">
                     <div className="category-labels">
                         <div onClick={() => clickCategory("Beverages")} className="category-title" id={showBevs ? 'bev-tab' : 'inactive-tab'}>Beverages</div>
