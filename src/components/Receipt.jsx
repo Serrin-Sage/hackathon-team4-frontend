@@ -1,13 +1,13 @@
 import { useState } from "react"
 
-const Receipt = ({ selectedItemList, total }) => {
+const Receipt = ({ selectedItemList, total, currentTable }) => {
     function createOrder(){
         fetch('http://localhost:3000/orders', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({'items': selectedItemList}),
+            body: JSON.stringify({'items': selectedItemList, 'table': currentTable}),
             })
             .then((response) => response.json())
             .then((data) => {
@@ -19,7 +19,7 @@ const Receipt = ({ selectedItemList, total }) => {
     
     return (
         <div>
-            Order
+            Order for table: {currentTable}
             <ul>
                 {
                     selectedItemList.map((item) => {
