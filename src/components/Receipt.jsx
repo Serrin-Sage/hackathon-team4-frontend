@@ -8,7 +8,7 @@ const Receipt = ({ selectedItemList }) => {
                     selectedItemList.map((item) => {
                         return (
                             <li>    
-                                {item.name}
+                                {`${item.name}:  $${item.price}`}
                             </li>
                         )
                     })
