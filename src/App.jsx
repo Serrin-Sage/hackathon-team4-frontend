@@ -8,12 +8,12 @@ import MenuItemsContainer from './components/menu/MenuItemsContainer'
 import MenuCategoryNavBar from './components/menu/MenuCategoryNavBar'
 
 function App() {
-  const [currentStaff, setCurrentStff] = useState({})
+  const [currentStaff, setCurrentStaff] = useState({})
 
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<LandingPage setCurrentStff={setCurrentStff}/>} />
+        <Route path="/" element={<LandingPage setCurrentStaff={setCurrentStaff}/>} />
         <Route path="/menu" element={<MenuPage currentStaff={currentStaff}/>} />
         <Route path="/manager" element={<ManagerPage />} />
         {/* <Route path="/Beverage" element={<MenuItemsContainer category = {'Beverage'}/>} />
