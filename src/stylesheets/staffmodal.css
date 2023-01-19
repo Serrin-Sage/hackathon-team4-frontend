@@ -122,7 +122,8 @@
 /*** ASSIGN TABLE FORM ***/
 .assign-table-form.neon-on {
     position: fixed;
-    top: 300px;
+    cursor: default;
+    right: 300px;
     width: fit-content;
     background-color: rgba(46, 46, 46, 0.938);
     color: #fff;
@@ -141,7 +142,8 @@
 }
 .assign-table-form.neon-off {
     position: absolute;
-    top: 300px;
+    cursor: default;
+    right: 300px;
     width: fit-content;
     background-color: rgba(46, 46, 46, 0.938);
     color: #fff;
@@ -152,9 +154,26 @@
     animation: grow 0.2s;
     animation-fill-mode: forwards;
 }
-.assign-table-form input {
+
+.assign-input.neon-on {
     width: 100px;
     height: 25px;
+    text-align: center;
+    font-size: 20px;
+    border: solid 1px #fff;
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 .2rem #00c241,
+            0 0 0.8rem #00c241,
+            0 0 10px #00c241,
+            inset 0 0 12px #00c241;
+}
+.assign-input.neon-off {
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    font-size: 20px;
+    border: solid 1px #fff;
 }
 
 /*** ADD STAFF FORM ***/
