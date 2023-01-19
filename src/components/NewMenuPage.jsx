@@ -14,6 +14,7 @@ const NewMenuPage = ({ currentStaff }) => {
     const [showDesserts, setShowDesserts] = useState(false)
 
     const [selectedItemList, setSelectedItemList] = useState([])
+    const [total, setTotal] = useState(0)
 
     const clickCategory = (selection) => {
         if (selection === "Beverages") {
@@ -38,12 +39,16 @@ const NewMenuPage = ({ currentStaff }) => {
             setShowDesserts(true)
         }
     }
+
+    function addToTotal(val){
+        setTotal(total + val)
+    }
     
     return (
         <div className="menu-page-container">
             <MenuHeader currentStaff={currentStaff}/>
             <div className="menu-page-content">
-                <Receipt selectedItemList={selectedItemList}/>
+                <Receipt selectedItemList={selectedItemList} total = {total}/>
                 <div className="category-page">
                     <div className="category-labels">
                         <div onClick={() => clickCategory("Beverages")} className="category-title" id={showBevs ? 'bev-tab' : 'inactive-tab'}>Beverages</div>
@@ -52,10 +57,12 @@ const NewMenuPage = ({ currentStaff }) => {
                         <div onClick={() => clickCategory("Desserts")} className="category-title" id={showDesserts ? 'dessert-tab' : 'inactive-tab'}>Desserts</div>
                     </div>
                     <div className="menu-content">
-                        {showBevs ? <Beverages setSelectedItemList={setSelectedItemList}/> : null}
-                        {showApps ? <Appetizers setSelectedItemList={setSelectedItemList}/> : null}
+
+                        {showBevs ? <Beverages addToTotal = {addToTotal} setSelectedItemList={setSelectedItemList}/> : null}
+                        {showApps ? <Appetizers addToTotal = {addToTotal} setSelectedItemList={setSelectedItemList}/> : null}
                         {showEntrees ? <Entrees setSelectedItemList={setSelectedItemList}/> : null}
                         {showDesserts ? <Desserts setSelectedItemList={setSelectedItemList}/> : null}
+
                     </div>
                 </div>
             </div>
