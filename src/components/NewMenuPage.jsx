@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react"
 
 import MenuHeader from "./MenuHeader"
+
+import MenuCategory from "./MenuCategory"
+
 import Receipt from "./Receipt"
 import Beverages from "./Beverages"
 import Appetizers from "./Appetizers"
@@ -15,38 +18,39 @@ const NewMenuPage = ({ currentStaff }) => {
         })
     }, [])
 
-    const [showBevs, setShowBevs] = useState(true)
-    const [showApps, setShowApps] = useState(false)
-    const [showEntrees, setShowEntrees] = useState(false)
-    const [showDesserts, setShowDesserts] = useState(false)
+    // const [showBevs, setShowBevs] = useState(true)
+    // const [showApps, setShowApps] = useState(false)
+    // const [showEntrees, setShowEntrees] = useState(false)
+    // const [showDesserts, setShowDesserts] = useState(false)
 
     const [selectedItemList, setSelectedItemList] = useState([])
     const [total, setTotal] = useState(0)
     const [currentTable, setCurrentTable] = useState('')
-
-    const clickCategory = (selection) => {
-        if (selection === "Beverages") {
-            setShowBevs(true)
-            setShowApps(false)
-            setShowEntrees(false)
-            setShowDesserts(false)
-        } else if (selection === "Appetizers") {
-            setShowBevs(false)
-            setShowApps(true)
-            setShowEntrees(false)
-            setShowDesserts(false)
-        } else if (selection === "Entrees"){
-            setShowBevs(false)
-            setShowApps(false)
-            setShowEntrees(true)
-            setShowDesserts(false)
-        } else if (selection === "Desserts"){
-            setShowBevs(false)
-            setShowApps(false)
-            setShowEntrees(false)
-            setShowDesserts(true)
-        }
-    }
+    const [selectedCategory, setSelectedCategory] = useState('Beverage')
+    
+    // const clickCategory = (selection) => {
+    //     if (selection === "Beverages") {
+    //         setShowBevs(true)
+    //         setShowApps(false)
+    //         setShowEntrees(false)
+    //         setShowDesserts(false)
+    //     } else if (selection === "Appetizers") {
+    //         setShowBevs(false)
+    //         setShowApps(true)
+    //         setShowEntrees(false)
+    //         setShowDesserts(false)
+    //     } else if (selection === "Entrees"){
+    //         setShowBevs(false)
+    //         setShowApps(false)
+    //         setShowEntrees(true)
+    //         setShowDesserts(false)
+    //     } else if (selection === "Desserts"){
+    //         setShowBevs(false)
+    //         setShowApps(false)
+    //         setShowEntrees(false)
+    //         setShowDesserts(true)
+    //     }
+    // }
 
     function addToTotal(val){
         setTotal(total + val)
@@ -73,6 +77,13 @@ const NewMenuPage = ({ currentStaff }) => {
         selectedItemList.map(item => total+= item.price)
         setTotal(total)
     }
+
+    const updateFoodList = (item) => {
+        setSelectedItemList((prevState) => {
+            return [...prevState, item]
+        })
+    }
+
     return (
         <div className="menu-page-container">
             <MenuHeader currentStaff={currentStaff} handleSetCurrentTable={handleSetCurrentTable} getOrder={getOrder} getTotal = {getTotal}/>
@@ -80,17 +91,19 @@ const NewMenuPage = ({ currentStaff }) => {
                 <Receipt selectedItemList={selectedItemList} total = {total} currentTable={currentTable} clearOrder={clearOrder} clearTotal={clearTotal}/>
                 <div className="category-page">
                     <div className="category-labels">
-                        <div onClick={() => clickCategory("Beverages")} className="category-title" id={showBevs ? 'bev-tab' : 'inactive-tab'}>Beverages</div>
-                        <div onClick={() => clickCategory("Appetizers")} className="category-title" id={showApps ? 'apps-tab' : 'inactive-tab'}>Appetizers</div>
-                        <div onClick={() => clickCategory("Entrees")} className="category-title" id={showEntrees ? 'entree-tab' : 'inactive-tab'}>Entrees</div>
-                        <div onClick={() => clickCategory("Desserts")} className="category-title" id={showDesserts ? 'dessert-tab' : 'inactive-tab'}>Desserts</div>
+                        <div onClick={() => setSelectedCategory("Beverage")} className="category-title" id={selectedCategory === "Beverage" ? 'bev-tab' : 'inactive-tab'}>Beverages</div>
+                        <div onClick={() => setSelectedCategory("Appetizer")} className="category-title" id={selectedCategory === "Appetizer" ? 'apps-tab' : 'inactive-tab'}>Appetizers</div>
+                        <div onClick={() => setSelectedCategory("Entree")} className="category-title" id={selectedCategory === "Entree" ? 'entree-tab' : 'inactive-tab'}>Entrees</div>
+                        <div onClick={() => setSelectedCategory("Dessert")} className="category-title" id={selectedCategory === "Dessert" ? 'dessert-tab' : 'inactive-tab'}>Desserts</div>
                     </div>
                     <div className="menu-content">
 
-                        {showBevs ? <Beverages addToTotal = {addToTotal} setSelectedItemList={setSelectedItemList}/> : null}
+                        {/* {showBevs ? <Beverages addToTotal = {addToTotal} setSelectedItemList={setSelectedItemList}/> : null}
                         {showApps ? <Appetizers addToTotal = {addToTotal} setSelectedItemList={setSelectedItemList}/> : null}
                         {showEntrees ? <Entrees setSelectedItemList={setSelectedItemList}/> : null}
-                        {showDesserts ? <Desserts setSelectedItemList={setSelectedItemList}/> : null}
+                        {showDesserts ? <Desserts setSelectedItemList={setSelectedItemList}/> : null} */}
+
+                        <MenuCategory addToTotal={addToTotal} updateFoodList={updateFoodList} selectedCategory={selectedCategory}/>
 
                     </div>
                 </div>
