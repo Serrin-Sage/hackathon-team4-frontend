@@ -5,7 +5,7 @@ import MenuCategory from "./MenuCategory"
 import Receipt from "./Receipt"
 
 
-const NewMenuPage = ({ currentStaff }) => {
+const MenuPage = ({ currentStaff }) => {
 
     useEffect(() => {
         fetch(`http://localhost:3000/staff/${currentStaff.id}/clock_in`, {
@@ -74,4 +74,4 @@ const NewMenuPage = ({ currentStaff }) => {
     )
 }
 
-export default NewMenuPage
+export default MenuPage
