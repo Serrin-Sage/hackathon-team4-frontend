@@ -40,9 +40,9 @@ const ManagerPage = ({ currentStaff }) => {
 
     return (
         <div className={`manager-main-container ${displayNeon ? 'neon-on' : 'neon-off'}`}>
-            <div className="table-screen">
+            {/* <div className="table-screen">
                 <TablePage />
-            </div>
+            </div> */}
             <div className="staff-screen">
                 <div className='grid-item'></div>
                 <div className='grid-item'></div>
