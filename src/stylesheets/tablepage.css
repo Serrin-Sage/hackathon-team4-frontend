@@ -1,5 +1,7 @@
 .table-container {
-    height: 80vh;
+    min-height: 80vh;
+    /* border: solid 2px red; */
+    width: 100%;
 }
 
 .table-1 {
